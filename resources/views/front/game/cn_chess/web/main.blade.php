@@ -509,7 +509,7 @@
 //下注紀錄
 function bet_latest_show(){
     $.ajax({
-  url: "SSE/bet",
+  url: "/SSE/bet",
 }).done(function(data) {
     var bets = JSON.parse(data)
             var bets_html = "";
