@@ -70,27 +70,33 @@ class CnChessSSEController extends Controller
 
 
     //近五期開獎
+    // public function last_five_lottery()
+    // {
+
+    //     $response = new \Symfony\Component\HttpFoundation\StreamedResponse(function() {
+
+    //         //while(true){
+    //             echo 'retry:10000'.PHP_EOL;
+    //             $sport = $this->chessService->last_five_lottery();
+    //             //$sec = strtotime($sport->start_datetime) - strtotime('now');
+    //             echo 'data:'.$sport.PHP_EOL;
+    //             echo PHP_EOL;
+    //             ob_flush();
+    //             flush();
+    //           //  sleep(0.5);
+    //         //}
+    //     });
+
+    //     $response->headers->set('Content-Type', 'text/event-stream');
+    //     $response->headers->set('Cache-Control', 'no-cache');
+    //     return $response;
+        
+    // }
     public function last_five_lottery()
     {
+        $sport = $this->chessService->last_five_lottery();
+        return $sport;
 
-        $response = new \Symfony\Component\HttpFoundation\StreamedResponse(function() {
-
-            //while(true){
-                echo 'retry:10000'.PHP_EOL;
-                $sport = $this->chessService->last_five_lottery();
-                //$sec = strtotime($sport->start_datetime) - strtotime('now');
-                echo 'data:'.$sport.PHP_EOL;
-                echo PHP_EOL;
-                ob_flush();
-                flush();
-              //  sleep(0.5);
-            //}
-        });
-
-        $response->headers->set('Content-Type', 'text/event-stream');
-        $response->headers->set('Cache-Control', 'no-cache');
-        return $response;
-        
     }
 
 
@@ -142,7 +148,6 @@ class CnChessSSEController extends Controller
     {
         $user = Auth::guard('web')->user();
         $sport = $this->chessService->user_bets($user->id);
-        // return Response::json(['data'=>$sport]);
         return $sport;
     }
 

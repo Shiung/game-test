@@ -509,19 +509,15 @@
 //下注紀錄
 function bet_latest_show(){
     $.ajax({
-  url: "/SSE/bet",
-}).done(function(data) {
-    var bets = JSON.parse(data)
-            var bets_html = "";
-            for (var i = 0, len = bets.length; i < len; i++) {
-                console.log(bets[i]);
+        url: "/SSE/bet",
+    }).done(function(data) {
+        var bets = JSON.parse(data)
+        var bets_html = "";
+        for (var i = 0, len = bets.length; i < len; i++) {
                 bets_html += "<tr><td>"+bets[i]['sport_number']+'</td><td><div class="latest-bet-record-img bet-record-currency-'+bets[i]['account_type']+'"></div></td><td>'+bets[i]['amount']+'</td><td><div class="latest-bet-record-img bet-record-gamble-'+bets[i]['gamble']+'"></div></td></tr>';
             }
             $("#bets").html(bets_html);
-
-});
-
-
+    });
 
     document.getElementById("bet_record_part").style.display = "block";
     document.getElementById("info_bg").style.display = "block";
@@ -551,6 +547,19 @@ function bet_result_close(){
  
 //歷史開獎
 function bet_history_show(){
+
+    $.ajax({
+        url: "/SSE/last_five_lottery",
+    }).done(function(data) {
+            var chess_five = JSON.parse(data)
+            var chess_five_html = "";
+            for (var i = 0, len = chess_five.length; i < len; i++) {
+                //console.log(chess_five[i]);
+                chess_five_html += '<tr class="history-tr"><td>'+chess_five[i]['sport_number']+'</td><td><div class="chesstd">'+chess_five[i][0]+' '+chess_five[i][1]+' '+chess_five[i][2]+' '+chess_five[i][3]+' '+chess_five[i][4]+'<div></td></tr>';
+            }
+            $("#history_lottery").html(chess_five_html);
+    });
+
     document.getElementById("history_lottery_part").style.display = "block";
     document.getElementById("info_bg").style.display = "block";
 }

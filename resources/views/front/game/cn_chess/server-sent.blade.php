@@ -124,17 +124,17 @@
         };
 
         //近五期紀錄
-        var source_last_five = new EventSource("{!! action('Front\Game\CnChessSSEController@last_five_lottery') !!}");
-        source_last_five.onmessage = function(event) {
-            //即時更新view資訊
-            var chess_five = JSON.parse(event.data)
-            var chess_five_html = "";
-            for (var i = 0, len = chess_five.length; i < len; i++) {
-                //console.log(chess_five[i]);
-                chess_five_html += '<tr class="history-tr"><td>'+chess_five[i]['sport_number']+'</td><td><div class="chesstd">'+chess_five[i][0]+' '+chess_five[i][1]+' '+chess_five[i][2]+' '+chess_five[i][3]+' '+chess_five[i][4]+'<div></td></tr>';
-            }
-            $("#history_lottery").html(chess_five_html);
-        };
+        // var source_last_five = new EventSource("{!! action('Front\Game\CnChessSSEController@last_five_lottery') !!}");
+        // source_last_five.onmessage = function(event) {
+        //     //即時更新view資訊
+        //     var chess_five = JSON.parse(event.data)
+        //     var chess_five_html = "";
+        //     for (var i = 0, len = chess_five.length; i < len; i++) {
+        //         //console.log(chess_five[i]);
+        //         chess_five_html += '<tr class="history-tr"><td>'+chess_five[i]['sport_number']+'</td><td><div class="chesstd">'+chess_five[i][0]+' '+chess_five[i][1]+' '+chess_five[i][2]+' '+chess_five[i][3]+' '+chess_five[i][4]+'<div></td></tr>';
+        //     }
+        //     $("#history_lottery").html(chess_five_html);
+        // };
         
 
         //最新餘額
