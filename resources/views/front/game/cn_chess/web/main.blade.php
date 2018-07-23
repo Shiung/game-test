@@ -508,6 +508,18 @@
 <script>
 //下注紀錄
 function bet_latest_show(){
+    $.ajax({
+  url: "SSE/bet",
+}).done(function(data) {
+    var bets = JSON.parse(data)
+            var bets_html = "";
+            for (var i = 0, len = bets.length; i < len; i++) {
+                //console.log(chess_five[i]);
+                bets_html += "<tr><td>"+bets[i]['sport_number']+'</td><td><div class="latest-bet-record-img bet-record-currency-'+bets[i]['account_type']+'"></div></td><td>'+bets[i]['amount']+'</td><td><div class="latest-bet-record-img bet-record-gamble-'+bets[i]['gamble']+'"></div></td></tr>';
+            }
+            $("#bets").html(bets_html);
+
+});
 
 
 
