@@ -102,7 +102,24 @@ function goBet(sendUri,sendData,game_info){
         data: sendData,
         type: 'POST',
         success: function(msg) {
-            
+            $.ajax({
+                url: "/SSE/balance",
+            }).done(function(data) {
+                var balance = JSON.parse(data)
+                //console.log(balance);
+    
+                if(page_mode == 'web'){
+                    $("#virtual_cash").html(balance['virtual_cash']);
+                    $("#manage").html(balance['manage']);
+                    $("#share").html(balance['share']);
+                    $("#interest").html(balance['interest']);
+                } else {
+                    $("#virtual_cash").html(nFormatter(balance['virtual_cash']));
+                    $("#manage").html(nFormatter(balance['manage']));
+                    $("#share").html(nFormatter(balance['share']));
+                    $("#interest").html(nFormatter(balance['interest']));
+                }
+            });
             var data = JSON.parse(msg);
             if (data.result == 1) {
                 HoldOn.close();

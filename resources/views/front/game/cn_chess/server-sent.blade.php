@@ -124,39 +124,39 @@
         };
 
         //近五期紀錄
-        var source_last_five = new EventSource("{!! action('Front\Game\CnChessSSEController@last_five_lottery') !!}");
-        source_last_five.onmessage = function(event) {
-            //即時更新view資訊
-            var chess_five = JSON.parse(event.data)
-            var chess_five_html = "";
-            for (var i = 0, len = chess_five.length; i < len; i++) {
-                //console.log(chess_five[i]);
-                chess_five_html += '<tr class="history-tr"><td>'+chess_five[i]['sport_number']+'</td><td><div class="chesstd">'+chess_five[i][0]+' '+chess_five[i][1]+' '+chess_five[i][2]+' '+chess_five[i][3]+' '+chess_five[i][4]+'<div></td></tr>';
-            }
-            $("#history_lottery").html(chess_five_html);
-        };
+        // var source_last_five = new EventSource("{!! action('Front\Game\CnChessSSEController@last_five_lottery') !!}");
+        // source_last_five.onmessage = function(event) {
+        //     //即時更新view資訊
+        //     var chess_five = JSON.parse(event.data)
+        //     var chess_five_html = "";
+        //     for (var i = 0, len = chess_five.length; i < len; i++) {
+        //         //console.log(chess_five[i]);
+        //         chess_five_html += '<tr class="history-tr"><td>'+chess_five[i]['sport_number']+'</td><td><div class="chesstd">'+chess_five[i][0]+' '+chess_five[i][1]+' '+chess_five[i][2]+' '+chess_five[i][3]+' '+chess_five[i][4]+'<div></td></tr>';
+        //     }
+        //     $("#history_lottery").html(chess_five_html);
+        // };
         
 
         //最新餘額
-        var source_balance = new EventSource("{!! action('Front\Game\CnChessSSEController@balance') !!}");
-        source_balance.onmessage = function(event) {
-            //即時更新view資訊
-            var balance = JSON.parse(event.data)
-            //console.log(balance);
+        // var source_balance = new EventSource("{!! action('Front\Game\CnChessSSEController@balance') !!}");
+        // source_balance.onmessage = function(event) {
+        //     //即時更新view資訊
+        //     var balance = JSON.parse(event.data)
+        //     //console.log(balance);
 
-            if(page_mode == 'web'){
-                $("#virtual_cash").html(balance['virtual_cash']);
-                $("#manage").html(balance['manage']);
-                $("#share").html(balance['share']);
-                $("#interest").html(balance['interest']);
-            } else {
-                $("#virtual_cash").html(nFormatter(balance['virtual_cash']));
-                $("#manage").html(nFormatter(balance['manage']));
-                $("#share").html(nFormatter(balance['share']));
-                $("#interest").html(nFormatter(balance['interest']));
-            }
+        //     if(page_mode == 'web'){
+        //         $("#virtual_cash").html(balance['virtual_cash']);
+        //         $("#manage").html(balance['manage']);
+        //         $("#share").html(balance['share']);
+        //         $("#interest").html(balance['interest']);
+        //     } else {
+        //         $("#virtual_cash").html(nFormatter(balance['virtual_cash']));
+        //         $("#manage").html(nFormatter(balance['manage']));
+        //         $("#share").html(nFormatter(balance['share']));
+        //         $("#interest").html(nFormatter(balance['interest']));
+        //     }
             
-        };
+        // };
 
         //數字格式化KM
         function nFormatter(num) {
@@ -182,17 +182,17 @@
 
 
         //十筆下注紀錄
-        var source_bet = new EventSource("{!! action('Front\Game\CnChessSSEController@bet') !!}");
-        source_bet.onmessage = function(event) {
-            //即時更新view資訊
-            var bets = JSON.parse(event.data)
-            var bets_html = "";
-            for (var i = 0, len = bets.length; i < len; i++) {
-                //console.log(chess_five[i]);
-                bets_html += "<tr><td>"+bets[i]['sport_number']+'</td><td><div class="latest-bet-record-img bet-record-currency-'+bets[i]['account_type']+'"></div></td><td>'+bets[i]['amount']+'</td><td><div class="latest-bet-record-img bet-record-gamble-'+bets[i]['gamble']+'"></div></td></tr>';
-            }
-            $("#bets").html(bets_html);
-        };
+        // var source_bet = new EventSource("{!! action('Front\Game\CnChessSSEController@bet') !!}");
+        // source_bet.onmessage = function(event) {
+        //     //即時更新view資訊
+        //     var bets = JSON.parse(event.data)
+        //     var bets_html = "";
+        //     for (var i = 0, len = bets.length; i < len; i++) {
+        //         //console.log(chess_five[i]);
+        //         bets_html += "<tr><td>"+bets[i]['sport_number']+'</td><td><div class="latest-bet-record-img bet-record-currency-'+bets[i]['account_type']+'"></div></td><td>'+bets[i]['amount']+'</td><td><div class="latest-bet-record-img bet-record-gamble-'+bets[i]['gamble']+'"></div></td></tr>';
+        //     }
+        //     $("#bets").html(bets_html);
+        // };
 
     } else {
         $("#result").html("Sorry, your browser does not support server-sent events...");
@@ -206,6 +206,25 @@
         var start_sec = {{ $chessService->info("sec") }};
         startCount(start_sec);
         
+        $.ajax({
+                    url: "/SSE/balance",
+                }).done(function(data) {
+                    var balance = JSON.parse(data)
+                    //console.log(balance);
+        
+                    if(page_mode == 'web'){
+                        $("#virtual_cash").html(balance['virtual_cash']);
+                        $("#manage").html(balance['manage']);
+                        $("#share").html(balance['share']);
+                        $("#interest").html(balance['interest']);
+                    } else {
+                        $("#virtual_cash").html(nFormatter(balance['virtual_cash']));
+                        $("#manage").html(nFormatter(balance['manage']));
+                        $("#share").html(nFormatter(balance['share']));
+                        $("#interest").html(nFormatter(balance['interest']));
+                    }
+                });
+
         
     });
 
