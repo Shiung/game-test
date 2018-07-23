@@ -100,25 +100,33 @@ class CnChessSSEController extends Controller
 
 
     //目前餘額  
+    // public function balance()
+    // {
+    //    $response = new \Symfony\Component\HttpFoundation\StreamedResponse(function() {
+    //             $user = Auth::guard('web')->user();
+    //         //while(true){
+    //             echo 'retry:1000'.PHP_EOL;
+    //             $sport = $this->chessService->balance($user->id);
+    //             //$sec = strtotime($sport->start_datetime) - strtotime('now');
+    //             echo 'data:'.$sport.PHP_EOL;
+    //             echo PHP_EOL;
+    //             ob_flush();
+    //             flush();
+    //           //  sleep(0.5);
+    //         //}
+    //     });
+
+    //     $response->headers->set('Content-Type', 'text/event-stream');
+    //     $response->headers->set('Cache-Control', 'no-cache');
+    //     return $response; 
+    // }
     public function balance()
     {
-       $response = new \Symfony\Component\HttpFoundation\StreamedResponse(function() {
-                $user = Auth::guard('web')->user();
-            //while(true){
-                echo 'retry:1000'.PHP_EOL;
-                $sport = $this->chessService->balance($user->id);
-                //$sec = strtotime($sport->start_datetime) - strtotime('now');
-                echo 'data:'.$sport.PHP_EOL;
-                echo PHP_EOL;
-                ob_flush();
-                flush();
-              //  sleep(0.5);
-            //}
-        });
+    
+        $user = Auth::guard('web')->user();
+        $sport = $this->chessService->balance($user->id);
+        return $sport;
 
-        $response->headers->set('Content-Type', 'text/event-stream');
-        $response->headers->set('Cache-Control', 'no-cache');
-        return $response; 
     }
 
 
