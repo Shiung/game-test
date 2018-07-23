@@ -509,17 +509,6 @@
 //下注紀錄
 function bet_latest_show(){
 
-        var source_bet = new EventSource("{!! action('Front\Game\CnChessSSEController@bet') !!}");
-        source_bet.onmessage = function(event) {
-            //即時更新view資訊
-            var bets = JSON.parse(event.data)
-            var bets_html = "";
-            for (var i = 0, len = bets.length; i < len; i++) {
-                //console.log(chess_five[i]);
-                bets_html += "<tr><td>"+bets[i]['sport_number']+'</td><td><div class="latest-bet-record-img bet-record-currency-'+bets[i]['account_type']+'"></div></td><td>'+bets[i]['amount']+'</td><td><div class="latest-bet-record-img bet-record-gamble-'+bets[i]['gamble']+'"></div></td></tr>';
-            }
-            $("#bets").html(bets_html);
-        };
 
 
     document.getElementById("bet_record_part").style.display = "block";
