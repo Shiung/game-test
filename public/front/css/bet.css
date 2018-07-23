@@ -1,0 +1,27 @@
+.bet{
+    text-align:center;
+    cursor: pointer; 
+}
+.bet:hover{
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.point{
+   /* height:20px;
+    padding-bottom: 10px;*/
+}
+
+.line-red{
+    color:#EB0C26;
+}
+
+.line-blue{
+    color:#0052A3;
+}
+
+.bg-red {
+    background-color:#FFC2B9;
+}
+
+.bg-blue {
+    background-color:#9AE7FA;
+}

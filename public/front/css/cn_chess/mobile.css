@@ -1,0 +1,1707 @@
+html,body { 
+  background: url("../../img/chess/phone/back_02.png") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.menu_active{
+    background-color: #DCDCDC;
+}
+
+.hide {
+    display: none !important;
+}
+
+/*上方開獎結果*/
+
+@keyframes run {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -367px 0;
+  }
+}
+
+@keyframes back {
+  0% {
+    background-position: -367px 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.latest-lottery-area {
+    position: relative;
+    width: 100%;
+}
+
+#lottery_close {
+    position: relative;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.lottery-close-img-area {
+    margin-left: 5px;
+    margin-bottom: 5px;
+    width: 70px;
+    height: 70px;
+    float: left;
+    text-align: center;
+    background: url("../../img/chess/phone/chess_cross_black_01.png") 0 0 no-repeat;
+    background-size: auto 70px;  
+}
+
+#lottery_open {
+    display: none;
+    position: relative;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.lottery_open_1 {
+    background: url("../../img/chess/phone/chess_animate/1.png") 0 0 no-repeat;
+}
+
+.lottery_open_2 {
+    background: url("../../img/chess/phone/chess_animate/2.png") 0 0 no-repeat;
+}
+
+.lottery_open_3 {
+    background: url("../../img/chess/phone/chess_animate/3.png") 0 0 no-repeat;
+}
+
+.lottery_open_4 {
+    background: url("../../img/chess/phone/chess_animate/4.png") 0 0 no-repeat;
+}
+
+.lottery_open_5 {
+    background: url("../../img/chess/phone/chess_animate/5.png") 0 0 no-repeat;
+}
+
+.lottery_open_6 {
+    background: url("../../img/chess/phone/chess_animate/6.png") 0 0 no-repeat;
+}
+
+.lottery_open_7 {
+    background: url("../../img/chess/phone/chess_animate/7.png") 0 0 no-repeat;
+}
+
+.lottery_open_8 {
+    background: url("../../img/chess/phone/chess_animate/8.png") 0 0 no-repeat;
+}
+
+.lottery_open_9 {
+    background: url("../../img/chess/phone/chess_animate/9.png") 0 0 no-repeat;
+}
+
+.lottery_open_10 {
+    background: url("../../img/chess/phone/chess_animate/10.png") 0 0 no-repeat;
+}
+.lottery_open_11 {
+    background: url("../../img/chess/phone/chess_animate/11.png") 0 0 no-repeat;
+}
+
+.lottery_open_12 {
+    background: url("../../img/chess/phone/chess_animate/12.png") 0 0 no-repeat;
+}
+
+.lottery_open_13 {
+    background: url("../../img/chess/phone/chess_animate/13.png") 0 0 no-repeat;
+}
+
+.lottery_open_14 {
+    background: url("../../img/chess/phone/chess_animate/14.png") 0 0 no-repeat;
+}
+
+.lottery_open_15 {
+    background: url("../../img/chess/phone/chess_animate/15.png") 0 0 no-repeat;
+}
+
+.lottery_open_16 {
+    background: url("../../img/chess/phone/chess_animate/16.png") 0 0 no-repeat;
+}
+
+.lottery_open_17 {
+    background: url("../../img/chess/phone/chess_animate/17.png") 0 0 no-repeat;
+}
+
+.lottery_open_18 {
+    background: url("../../img/chess/phone/chess_animate/18.png") 0 0 no-repeat;
+}
+
+.lottery_open_19 {
+    background: url("../../img/chess/phone/chess_animate/19.png") 0 0 no-repeat;
+}
+
+.lottery_open_20 {
+    background: url("../../img/chess/phone/chess_animate/20.png") 0 0 no-repeat;
+}
+
+.lottery_open_21 {
+    background: url("../../img/chess/phone/chess_animate/21.png") 0 0 no-repeat;
+}
+
+.lottery_open_22 {
+    background: url("../../img/chess/phone/chess_animate/22.png") 0 0 no-repeat;
+}
+
+.lottery-open-img-area {
+    margin-left: 5px;
+    width: 70px;
+    height: 70px;
+    float: left;
+    text-align: center;
+    background-size: auto 70px;
+
+}
+
+.lottery-animate1 {
+    animation: run 1.5s 1s steps(5) 1;
+    animation-fill-mode: forwards;
+}
+
+.lottery-animate2 {
+    animation: run 1.5s 3s steps(5) 1;
+    animation-fill-mode: forwards;
+}
+
+.lottery-animate3 {
+    animation: run 1.5s 5s steps(5) 1;
+    animation-fill-mode: forwards;
+}
+
+.lottery-animate4 {
+    animation: run 1.5s 7s steps(5) 1;
+    animation-fill-mode: forwards;
+}
+
+.lottery-animate5 {
+    animation: run 1.5s 9s steps(5) 1;
+    animation-fill-mode: forwards;
+}
+
+.lottery-animate-close {
+    animation: back 1.5s 0s steps(5) 1;
+    animation-fill-mode: backwards;
+}
+
+/*上方開獎結果i7大小～plus以下*/
+@media screen and (min-width: 375px) and (max-width: 413px) {
+ 
+    #lottery_close {
+        margin-top: 0px;
+    }
+
+    #lottery_open {
+        margin-top: 0px;
+    }
+    
+    @keyframes run {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: -313px 0;
+      }
+    }
+    
+    @keyframes back {
+      0% {
+        background-position: -313px 0;
+      }
+      100% {
+        background-position: 0 0;
+      }
+    }
+    
+    .lottery-close-img-area {
+        margin-left: 8px;
+        width: 60px;
+        height: 60px;
+        background-size: auto 60px;  
+    }
+
+    .lottery-open-img-area {
+        margin-left: 8px;
+        width: 60px;
+        height: 60px;
+        background-size: auto 60px;
+    }
+    
+}
+
+/*上方開獎結果i5大小～i7以下*/
+@media screen and (max-width: 374px) {
+ 
+    .m-top-margin {
+        height: 100px !important;
+    }
+    
+    #lottery_close {
+        margin-top: 0px;
+    }
+
+    #lottery_open {
+        margin-top: 0px;
+    }
+    
+    @keyframes run {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: -263px 0;
+      }
+    }
+    
+    @keyframes back {
+      0% {
+        background-position: -263px 0;
+      }
+      100% {
+        background-position: 0 0;
+      }
+    }
+    
+    .lottery-close-img-area {
+        margin-left: 8px;
+        width: 50px;
+        height: 50px;
+        background-size: auto 50px;  
+    }
+
+    .lottery-open-img-area {
+        margin-left: 8px;
+        width: 50px;
+        height: 50px;
+        background-size: auto 50px;
+    }
+    
+}
+
+
+/*期別&倒數*/
+#header_part {
+    position: relative;
+}
+
+.chess-header-bg {
+    position: absolute;
+    width: 95%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.chess-time-bg {
+    position: absolute;
+    width: 95%;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.chess-header-text {
+    position: relative;
+    font-size: 18px;
+    line-height: 36px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-weight: bold;
+    color: #191639;
+    z-index: 2;
+}
+
+.progress {
+    position: absolute;
+    width: 65%;
+    top: 8px;
+    left: 15px;
+    height: 20px;
+    background-color: rgba(0,0,0,0);
+    border: 2px solid #191639;
+    border-radius: 0px;
+}
+
+.progress-bar {
+    float:right;
+    background-color: #191639;
+}
+
+/*期別&倒數i7大小～plus以下*/
+@media screen and (min-width: 375px) and (max-width: 413px) {
+ 
+    .chess-header-text {
+        font-size: 16px;
+        line-height: 36px;
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+
+    .progress {
+        position: absolute;
+        width: 60%;
+        top: 9px;
+        left: 10px;
+        height: 17px;
+    }
+
+    .progress-bar {
+        float:right;
+        background-color: #191639;
+    }
+    
+}
+
+/*期別&倒數i5大小～i7以下*/
+@media screen and (max-width: 374px) {
+ 
+    .chess-header-text {
+        font-size: 14px;
+        line-height: 29px;
+        padding-left: 1px;
+        padding-right: 1px;
+    }
+
+    .progress {
+        position: absolute;
+        width: 60%;
+        top: 8px;
+        left: 8px;
+        height: 13px;
+    }
+
+    .progress-bar {
+        float:right;
+        background-color: #191639;
+    }
+    
+}
+
+
+/*棋盤*/
+#bet_checkerboard {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    height: 0;
+    padding-bottom: 83%;
+}
+
+#bet_start {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 0;
+    padding-bottom: 83%;
+    background-color: rgba(25, 22, 57, 0);
+    z-index: 99;
+}
+
+#bet_start img {
+    width: 82%;
+    margin-left: 9%;
+}
+
+#bet_end {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 0;
+    padding-bottom: 83%;
+    background-color: rgba(25, 22, 57, 0);
+    z-index: 99;
+}
+
+#bet_end img {
+    width: 82%;
+    margin-left: 9%;
+}
+
+.m-checkerboard-bg {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.checkerboard-row {
+    padding: 9.5px 15px;
+}
+
+.checkerboard-row-4 {
+    padding: 12px 15px;
+}
+
+.checkerboard-col {
+    padding: 0px 0px;
+}
+
+.m-chess-bg {
+    position: absolute;
+    width: 66%;
+    top: 10px;
+    left: 17%;
+    z-index: 1;
+}
+
+/*將帥*/
+.m-chess-bg-b {
+    position: absolute;
+    width: 33%;
+    top: 10px;
+    left: 17%;
+    z-index: 1;
+}
+
+.m-chess-bg-r {
+    position: absolute;
+    width: 33%;
+    top: 10px;
+    left: 52%;
+    z-index: 1;
+}
+
+/*黑紅*/
+.m-chess-bg-color {
+    position: absolute;
+    width: 50%;
+    top: 7px;
+    left: 25%;
+    z-index: 1;
+}
+
+@font-face {
+    font-family: "隸書";
+    src: url("../../fonts/DFLiShuStd-W7.otf");
+}
+
+.chess_number {
+    position: relative;
+    font-family: "隸書";
+    z-index: 2;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    padding-top: 20px;
+    cursor: pointer;
+    color: rgba(0,0,0,0);
+}
+
+/*棋子下注點擊區域*/
+.chess-link {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    padding-bottom: 60%;
+    z-index: 98;
+    top: 0;
+    left: 0;
+}
+
+.chess-link-king {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    padding-bottom: 30%;
+    z-index: 98;
+    top: 0;
+    left: 0;
+}
+
+.m-color-chess-bg {
+    width: 55%;
+    z-index: 1;
+}
+
+.chess_color {
+    padding-top:5px;
+}
+
+.chess_chip_part {
+    position: absolute;
+}
+
+.chess_b {
+    color: #000000;
+}
+
+.chess_r {
+    color: #E3000D;
+}
+
+
+/*棋盤i7大小～plus以下*/
+@media screen and (min-width: 375px) and (max-width: 413px) {
+ 
+    .checkerboard-row {
+        padding: 5px 15px;
+    }
+    
+    .m-chess-bg-color {
+        top: 12px;
+    }
+    
+}
+
+/*棋盤Android主流*/
+@media screen and (min-width: 360px) and (max-width: 374px) {
+ 
+    .checkerboard-row {
+        padding: 3px 15px;
+    }
+    
+    .m-chess-bg-color {
+        top: 12px;
+    }
+       
+}
+
+/*棋盤i5大小*/
+@media screen and (max-width: 359px) {
+ 
+    .checkerboard-row {
+        padding: 0px 15px;
+    }
+    
+    .m-chess-bg-color {
+        top: 12px;
+    }
+       
+}
+
+
+/*棋盤中下注額顯示*/
+.m-chip-area {
+    display: none;
+    position: absolute;
+    padding: 5px 8px;
+    left: 0;
+    z-index: 97;
+}
+
+.m-chip-area img {
+    width: 14px;
+}
+
+
+.m-chip-mount {
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 2px 2px #000, 0 -2px 2px #000, 2px 0 2px #000, -2px 0 2px #000;
+}
+
+.m-chip-area-gold {
+    top: 0;
+}
+
+.m-chip-area-ulg {
+    top: 16px;
+}
+
+.m-chip-area-red {
+    top: 32px;
+}
+
+.m-chip-area-gift {
+    top: 48px;
+}
+
+/*棋盤中下注圖片顯示*/
+
+.bet_ani_1 {
+    position: absolute;
+    width: 80px;
+    height: 44px;
+    background: url("../../img/chess/phone/coin_01.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    bottom: -60%;
+    right: -10px;
+    z-index: 96;
+}
+
+.bet_ani_2 {
+    position: absolute;
+    width: 80px;
+    height: 44px;
+    background: url("../../img/chess/phone/coin_02.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    bottom: -60%;
+    right: -10px;
+    z-index: 96;
+}
+
+.bet_ani_3 {
+    position: absolute;
+    width: 80px;
+    height: 44px;
+    background: url("../../img/chess/phone/coin_03.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    bottom: -60%;
+    right: -10px;
+    z-index: 96;
+}
+
+.bet_ani_4 {
+    position: absolute;
+    width: 80px;
+    height: 44px;
+    background: url("../../img/chess/phone/coin_04.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    bottom: -60%;
+    right: -10px;
+    z-index: 96;
+}
+
+
+
+/*棋盤中顯示i7大小～plus以下*/
+@media screen and (min-width: 375px) and (max-width: 413px) {
+ 
+    .m-chip-area {
+        padding: 3px 5px;
+    }
+
+    .m-chip-area img {
+        width: 12px;
+    }
+
+
+    .m-chip-mount {
+        font-size: 10px;
+        font-weight: bold;
+        color: white;
+        text-shadow: 0 2px 2px #000, 0 -2px 2px #000, 2px 0 2px #000, -2px 0 2px #000;
+    }
+
+    .m-chip-area-gold {
+        top: 0;
+    }
+
+    .m-chip-area-ulg {
+        top: 15px;
+    }
+
+    .m-chip-area-red {
+        top: 30px;
+    }
+
+    .m-chip-area-gift {
+        top: 45px;
+    }
+
+    .bet_ani_1 {
+        width: 70px;
+        height: 39px;
+        bottom: -45%;
+    }
+
+    .bet_ani_2 {
+        width: 70px;
+        height: 39px;
+        bottom: -45%;
+    }
+
+    .bet_ani_3 {
+        width: 70px;
+        height: 39px;
+        bottom: -45%;
+    }
+
+    .bet_ani_4 {
+        width: 70px;
+        height: 39px;
+        bottom: -45%;
+    }
+    
+}
+
+/*棋盤中顯示i5大小～i7以下*/
+@media screen and (max-width: 374px) {
+ 
+    .m-chip-area {
+        padding: 0px 5px;
+    }
+
+    .m-chip-area img {
+        width: 10px;
+    }
+
+
+    .m-chip-mount {
+        font-size: 8px;
+        font-weight: bold;
+        color: white;
+        text-shadow: 0 2px 2px #000, 0 -2px 2px #000, 2px 0 2px #000, -2px 0 2px #000;
+    }
+
+    .m-chip-area-gold {
+        top: 0;
+    }
+
+    .m-chip-area-ulg {
+        top: 12px;
+    }
+
+    .m-chip-area-red {
+        top: 24px;
+    }
+
+    .m-chip-area-gift {
+        top: 36px;
+    }
+
+    .bet_ani_1 {
+        width: 60px;
+        height: 33px;
+        bottom: -25%;
+    }
+
+    .bet_ani_2 {
+        width: 60px;
+        height: 33px;
+        bottom: -25%;
+    }
+
+    .bet_ani_3 {
+        width: 60px;
+        height: 33px;
+        bottom: -25%;
+    }
+
+    .bet_ani_4 {
+        width: 60px;
+        height: 33px;
+        bottom: -25%;
+    }
+     
+}
+
+/*下注區域*/
+#bet_chip {
+    position: relative;
+    margin-top: 6px;
+}
+
+.m-bet-bg {
+    display: none;
+    width: 100%;
+    z-index: 1;
+}
+
+.m-bet-select {
+    display: none;
+    width: 100%;
+    z-index: 1;
+}
+
+.display {
+    display: block !important;
+}
+
+.m-bet-btn {
+    position: absolute;
+    margin-top: 6px;
+    right: 0;
+    width: 80%;
+    cursor: pointer;
+}
+
+.chip-col {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+/*籌碼未選擇(圓形)
+.circle_bottom_bg1 , .circle_bottom_bg3 {
+    background: url("../../img/chess/phone/currency_bet_back_B_01.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}*/
+
+/*籌碼未選擇(卡片形)
+.circle_bottom_bg2 , .circle_bottom_bg4 {
+    background: url("../../img/chess/phone/currency_bet_back_B_02.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}*/
+
+/*籌碼未選擇(金額)*/
+.circle_bottom_bg {
+    background: url("../../img/chess/phone/coin_bet_back_B.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+/*籌碼已選擇(圓形)
+.circle_active1 , .circle_active3 {
+    background: url("../../img/chess/phone/currency_bet_back_W_01.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}*/
+
+/*籌碼已選擇(卡片形)
+.circle_active2 , .circle_active4 {
+    background: url("../../img/chess/phone/currency_bet_back_W_02.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}*/
+
+/*籌碼已選擇(金額)*/
+.circle_active {
+    background: url("../../img/chess/phone/coin_bet_back_W.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+#bet_investment {
+    position: relative;
+    margin-top: 10px;
+}
+
+@keyframes go {
+  0% {
+    margin-left: -105px;
+  }
+  100% {
+    margin-left: 0px;
+  }
+}
+
+.bet-latest-btn {
+    position: absolute;
+    top: 13px;
+    left: -15px;
+    z-index: 99;
+}
+
+.bet-latest-back {
+    position: absolute;
+    top: 13px;
+    left: 83px;
+    z-index: 99;
+}
+
+#bet-latest-btn-back {
+    display: none;
+    z-index: 98;
+    height: 0px;
+}
+
+#bet-latest-btn-close {
+    width: 110%;
+    z-index: 99;
+}
+
+#bet-latest-btn-open {
+    display: none;
+    z-index: 98;
+}
+
+.bet-latest-btn-open {
+    width: 0%;
+    height: 45px;
+}
+
+.bet-latest-btn-open-animate {
+    width: 105px !important;
+    animation: go 1s steps(100) 1;
+    animation-fill-mode: forwards;
+}
+
+.bet-latest-btn-back-animate {
+    height: 45px !important;
+    animation: go 1s steps(100) 1;
+    animation-fill-mode: forwards;
+}
+
+.bet-history-btn {
+    position: absolute;
+    top: 13px;
+    left: -15px;
+    z-index: 99;
+}
+
+.bet-history-back {
+    position: absolute;
+    top: 13px;
+    left: 83px;
+    z-index: 99;
+}
+
+#bet-history-btn-back {
+    display: none;
+    z-index: 98;
+    height: 0px;
+}
+
+#bet-history-btn-close {
+    width: 110%;
+    z-index: 99;
+}
+
+#bet-history-btn-open {
+    display: none;
+    z-index: 98;
+}
+
+.bet-history-btn-open {
+    width: 0%;
+    height: 45px;
+}
+
+.bet-history-btn-open-animate {
+    width: 105px !important;
+    animation: go 1s steps(100) 1;
+    animation-fill-mode: forwards;
+}
+
+.bet-history-btn-back-animate {
+    height: 45px !important;
+    animation: go 1s steps(100) 1;
+    animation-fill-mode: forwards;
+}
+
+
+
+/*下注區i7大小～plus以下*/
+@media screen and (min-width: 375px) and (max-width: 413px) {
+ 
+    .bet-latest-btn-open {
+        height: 40px;
+    }
+
+    .bet-latest-btn-open-animate {
+        width: 90px !important;
+    }
+
+    .bet-history-btn-open {
+        height: 40px;
+    }
+
+    .bet-history-btn-open-animate {
+        width: 90px !important;
+    }
+    
+    
+    .bet-latest-back {
+        left: 69px;
+    }
+
+    .bet-latest-btn-back-animate {
+        height: 40px !important;
+    }
+    
+    .bet-history-back {
+        left: 69px;
+    }
+
+    .bet-history-btn-back-animate {
+        height: 40px !important;
+    }
+    
+}
+
+/*下注區Android主流*/
+@media screen and (min-width: 360px) and (max-width: 374px) {
+ 
+    .bet-latest-btn-open {
+        height: 35px;
+    }
+
+    .bet-latest-btn-open-animate {
+        width: 80px !important;
+    }
+
+    .bet-history-btn-open {
+        height: 35px;
+    }
+
+    .bet-history-btn-open-animate {
+        width: 80px !important;
+    }
+    
+    .bet-latest-back {
+        left: 60px;
+    }
+
+    .bet-latest-btn-back-animate {
+        height: 35px !important;
+    }
+    
+    .bet-history-back {
+        left: 60px;
+    }
+
+    .bet-history-btn-back-animate {
+        height: 35px !important;
+    }
+    
+    
+}
+
+/*下注區i5大小*/
+@media screen and (max-width: 359px) {
+ 
+    .bet-latest-btn-open {
+        height: 30px;
+    }
+
+    .bet-latest-btn-open-animate {
+        width: 70px !important;
+    }
+
+    .bet-history-btn-open {
+        height: 30px;
+    }
+
+    .bet-history-btn-open-animate {
+        width: 70px !important;
+    }
+    
+    .bet-latest-back {
+        left: 51px;
+    }
+
+    .bet-latest-btn-back-animate {
+        height: 30px !important;
+    }
+    
+    .bet-history-back {
+        left: 51px;
+    }
+
+    .bet-history-btn-back-animate {
+        height: 30px !important;
+    }
+}
+
+
+/*下注紀錄*/
+#bet_record_part {
+    display: none;
+    position: fixed;
+    width: 98%;
+    height: 330px;
+    top: 30.5%;
+    left: 1%;
+    background: url("../../img/chess/phone/chess-open-cross_02.gif");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    z-index: 99;
+    padding: 20px 30px;
+}
+
+#bet_record_content {
+    display: none;
+}
+
+#bet_record_part_animate {
+    display: none;
+    position: fixed;
+    width: 98%;
+    height: 330px;
+    top: 30.5%;
+    left: 1%;
+    background: url("../../img/chess/phone/chess-close-cross_02.gif");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    z-index: 99;
+    padding: 20px 30px;
+}
+
+
+.bet-record-close {
+    position: absolute;
+    width: 25px;
+    top: 40px;
+    right: 30px;
+    cursor: pointer;
+}
+
+.bet-record-close img {
+    width: 100%;
+}
+
+.reel-title {
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.reel-title img {
+    height: 18px;
+}
+
+.table-record-area {
+    margin-top: 10px;
+    width: 100%;
+    height: 220px;
+    padding-right: 10px;
+    overflow-y: scroll;
+}
+
+.table-record-area::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0);
+}
+
+.table-record-area::-webkit-scrollbar
+{
+    width: 10px;
+    background-color: #191639;
+    border-left: 3px solid #E7B652;
+    border-right: 3px solid #E7B652;
+}
+
+.table-record-area::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    background-color: #191639;
+}
+
+.table-record {
+    border: 1px solid #191639;
+
+}
+
+.table-record > thead > tr > th {
+    border-bottom: 1px solid #191639;
+    text-align: center;
+}
+
+.table-record > thead > tr > th, .table-record > tbody > tr > th, .table-record > tfoot > tr > th, .table-record > thead > tr > td, .table-record > tbody > tr > td, .table-record > tfoot > tr > td {
+    border: 1px solid #191639;
+    vertical-align:middle;
+    text-align: center;
+}
+
+/*最新下注圖片顯示*/
+
+.bet-record-currency-1 {
+    background: url("../../img/chess/phone/chess/currency_1.png");
+}
+
+.bet-record-currency-2 {
+    background: url("../../img/chess/phone/chess/currency_2.png");
+}
+
+.bet-record-currency-3 {
+    background: url("../../img/chess/phone/chess/currency_3.png");
+}
+
+.bet-record-currency-4 {
+    background: url("../../img/chess/phone/chess/currency_4.png");
+}
+
+.bet-record-gamble-12 {
+    width:63px !important;
+    height: 30px;
+    background: url("../../img/chess/phone/chess/12.png");
+    background-repeat: no-repeat;
+    background-size: 63px 30px !important;
+}
+
+.bet-record-gamble-35 {
+    background: url("../../img/chess/phone/chess/35.png");
+}
+
+.bet-record-gamble-46 {
+    background: url("../../img/chess/phone/chess/46.png");
+}
+
+.bet-record-gamble-79 {
+    background: url("../../img/chess/phone/chess/79.png");
+}
+
+.bet-record-gamble-810 {
+    background: url("../../img/chess/phone/chess/810.png");
+}
+
+.bet-record-gamble-1113 {
+    background: url("../../img/chess/phone/chess/1113.png");
+}
+
+.bet-record-gamble-1214 {
+    background: url("../../img/chess/phone/chess/1214.png");
+}
+
+.bet-record-gamble-1517 {
+    background: url("../../img/chess/phone/chess/1517.png");
+}
+
+.bet-record-gamble-1618 {
+    background: url("../../img/chess/phone/chess/1618.png");
+}
+
+.bet-record-gamble-1921 {
+    background: url("../../img/chess/phone/chess/1921.png");
+}
+
+.bet-record-gamble-2022 {
+    background: url("../../img/chess/phone/chess/2022.png");
+}
+
+.bet-record-gamble-B {
+    background: url("../../img/chess/phone/chess/B.png");
+}
+
+.bet-record-gamble-R {
+    background: url("../../img/chess/phone/chess/R.png");
+}
+
+.latest-bet-record-img {
+    width:30px;
+    height: 30px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+}
+
+
+/*最新下注i7大小～plus以下*/
+@media screen and (min-width: 375px) and (max-width: 413px) {
+ 
+    .reel-title {
+        padding-top: 22px;
+        padding-bottom: 3px;
+    }
+
+    .reel-title img {
+        height: 15px;
+    }
+    
+    .bet-record-close {
+        width: 22px;
+        top: 35px;
+        right: 30px;
+    }
+    
+    .table-record-area {
+        height: 200px;
+    }
+    
+}
+
+/*最新下注Android主流*/
+@media screen and (min-width: 360px) and (max-width: 374px) {
+ 
+    .reel-title {
+        padding-top: 18px;
+        padding-bottom: 2px;
+    }
+
+    .reel-title img {
+        height: 15px;
+    }
+    
+    .bet-record-close {
+        width: 22px;
+        top: 35px;
+        right: 30px;
+    }
+        
+    .table-record-area {
+        height: 190px;
+    }
+    
+    .table-record {
+        font-size: 14px;
+    }
+    
+}
+
+/*最新下注i5大小*/
+@media screen and (max-width: 359px) {
+ 
+    .reel-title {
+        padding-top: 10px;
+        padding-bottom: 2px;
+    }
+
+    .reel-title img {
+        height: 12px;
+    }
+   
+    .bet-record-close {
+        width: 20px;
+        top: 30px;
+        right: 25px;
+    }
+        
+    .table-record-area {
+        height: 160px;
+    }
+    
+    .table-record {
+        font-size: 12px;
+    }
+    
+}
+
+/*歷史開獎*/
+#history_lottery_part {
+    display: none;
+    position: fixed;
+    width: 98%;
+    height: 330px;
+    top: 30.5%;
+    left: 1%;
+    background: url("../../img/chess/phone/chess-open-cross_01.gif");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    z-index: 99;
+    padding: 5px 40px;
+}
+
+#history_lottery_content {
+    display: none;
+}
+
+#history_lottery_close_animate {
+    display: none;
+    position: fixed;
+    width: 98%;
+    height: 330px;
+    top: 30.5%;
+    left: 1%;
+    background: url("../../img/chess/phone/chess-close-cross_01.gif");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    z-index: 99;
+    padding: 5px 40px;
+}
+
+.bet-history-close {
+    position: absolute;
+    width: 25px;
+    top: 25px;
+    right: 45px;
+    cursor: pointer;
+}
+
+.bet-history-close img {
+    width: 100%;
+}
+
+.history-tr , .history-tr td {
+    height: 40px;
+    line-height: 40px;
+    padding: 2px 5px !important;
+    text-align: center;
+}
+
+.history_chess_red {
+    float: left;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    background: url("../../img/chess/phone/chess_other_R.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    text-align: center;
+    font-family: "隸書";
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #E3000D;
+}
+
+.history_chess_black {
+    float: left;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    background: url("../../img/chess/phone/chess_other_B.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    text-align: center;
+    font-family: "隸書";
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #000000;
+}
+
+.history_chess_red span , .history_chess_black span{
+    font-family: "隸書";
+}
+
+
+/*歷史開獎i7大小～plus以下*/
+@media screen and (min-width: 375px) and (max-width: 413px) {
+   
+    .bet-history-close {
+        width: 22px;
+        top: 22px;
+        right: 45px;
+    }
+    
+    .history-tr , .history-tr td {
+        height: 40px;
+        line-height: 40px;
+        padding: 1px 15px !important;
+        text-align: center;
+    }
+
+    .history_chess_red {
+        width: 33px;
+        height: 33px;
+        line-height: 33px;
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+
+    .history_chess_black {
+        width: 33px;
+        height: 33px;
+        line-height: 33px;
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+
+}
+
+/*歷史開獎Android主流*/
+@media screen and (min-width: 360px) and (max-width: 374px) {
+
+    .bet-history-close {
+        width: 22px;
+        top: 20px;
+        right: 40px;
+    }
+ 
+    .table-record {
+        font-size: 14px;
+    }
+        
+    .history-tr , .history-tr td {
+        height: 38px;
+        line-height: 38px;
+        padding: 1px 15px !important;
+        text-align: center;
+    }
+
+    .history_chess_red {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+
+    .history_chess_black {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+
+}
+
+/*歷史開獎i5大小*/
+@media screen and (max-width: 359px) {
+
+    .bet-history-close {
+        width: 20px;
+        top: 15px;
+        right: 40px;
+    }
+
+    .table-record {
+        font-size: 12px;
+    }
+       
+    .history-tr , .history-tr td {
+        height: 34px;
+        line-height: 34px;
+        padding: 1px 6px !important;
+        text-align: center;
+    }
+
+    .history_chess_red {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+    .history_chess_black {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+}
+
+
+/*上局小計*/
+#latest_count {
+    display: none;
+    position: fixed;
+    width: 400px;
+    height: 530px;
+    top: 50%;
+    margin-top: -260px;
+    left: 50%;
+    margin-left: -200px;
+    background: url("../../img/chess/phone/popup_bet_bg_02.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    z-index: 99;
+}
+
+.bet_result_close {
+    position: absolute;
+    top: 12%;
+    right: 10%;
+    width: 30px;
+}
+
+.bet_result_close img {
+    width: 100%;
+}
+
+.bet_account {
+    position: absolute;
+    right: 60px;
+    color: #3c0000;
+    text-align: right;
+    font-family: Frutiger;
+    font-size: 24px;
+    font-weight: bold;
+    font-stretch: condensed;
+}
+
+#bet_account_1 {
+    top: 166px;
+}
+
+#bet_account_3 {
+    top: 245px;
+}
+
+#bet_account_4 {
+    top: 322px;
+}
+
+#bet_account_2 {
+    top: 399px;
+}
+
+
+
+/*上局小計i7大小～plus以下*/
+@media screen and (min-width: 360px) and (max-width: 413px) {
+   
+    #latest_count {
+        width: 350px;
+        height: 478px;
+        top: 50%;
+        margin-top: -235px;
+        left: 50%;
+        margin-left: -175px;
+    }
+
+    .bet_account {
+        right: 55px;
+    }
+
+    #bet_account_1 {
+        top: 145px;
+    }
+
+    #bet_account_3 {
+        top: 213px;
+    }
+
+    #bet_account_4 {
+        top: 281px;
+    }
+
+    #bet_account_2 {
+        top: 350px;
+    }
+
+}
+
+
+/*上局小計i5大小*/
+@media screen and (max-width: 359px) {
+
+    #latest_count {
+        width: 300px;
+        height: 410px;
+        top: 50%;
+        margin-top: -200px;
+        left: 50%;
+        margin-left: -150px;
+    }
+
+    .bet_account {
+        right: 50px;
+        font-size: 20px;
+    }
+
+    #bet_account_1 {
+        top: 125px;
+    }
+
+    #bet_account_3 {
+        top: 182px;
+    }
+
+    #bet_account_4 {
+        top: 240px;
+    }
+
+    #bet_account_2 {
+        top: 298px;
+    }
+
+}
+
+#count_bg {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 98;
+    background-color: rgba(25, 22, 57, 0.5);
+}
+
+/*下注按鈕*/
+#confirm_bet_0 {
+    display: block;
+}
+
+#confirm_bet {
+    display: none;
+}
+#cancel_bet_0 {
+    display: block;
+}
+
+#cancel_bet {
+    display: none;
+}

@@ -1,0 +1,51 @@
+#paper {
+	margin: 16px;
+	width: 512px;
+}
+
+#console {
+	padding: 8px;
+	border:0;
+}
+
+#uploadbox {
+	padding:2px;
+}
+
+.singleupload {
+	background: url(empty_bg.png);
+	border:1px solid #ccc;
+	text-align: center;
+	width: 92px;
+	height: 92px;
+	line-height: 92px;
+	cursor: pointer;
+}
+#add-btn{
+
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 3;
+  -moz-border-radius: 3;
+  border-radius: 3px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 10px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+#info {
+	padding:8px 24px;
+}
+
+#imageinfo {
+	padding: 8px 22px;
+}
+
+#imageinfo input {
+	width:400px;
+}
