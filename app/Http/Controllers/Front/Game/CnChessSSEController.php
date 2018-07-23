@@ -41,7 +41,7 @@ class CnChessSSEController extends Controller
          $response = new \Symfony\Component\HttpFoundation\StreamedResponse(function() {
 
             //while(true){
-                echo 'retry:500'.PHP_EOL;
+                echo 'retry:900'.PHP_EOL;
                 $sport = $this->chessService->sport_chess();
                 //$sec = strtotime($sport->start_datetime) - strtotime('now');
                 echo 'data:'.$sport.PHP_EOL;
