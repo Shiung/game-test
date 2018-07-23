@@ -117,27 +117,32 @@ class CnChessSSEController extends Controller
 
 
     //下注紀錄
+    // public function bet()
+    // {
+    //    $response = new \Symfony\Component\HttpFoundation\StreamedResponse(function() {
+    //             $user = Auth::guard('web')->user();
+    //         //while(true){
+    //             echo 'retry:1000'.PHP_EOL;
+    //             $sport = $this->chessService->user_bets($user->id);
+    //             //$sec = strtotime($sport->start_datetime) - strtotime('now');
+    //             echo 'data:'.$sport.PHP_EOL;
+    //             echo PHP_EOL;
+    //             ob_flush();
+    //             flush();
+    //           //  sleep(0.5);
+    //         //}
+    //     });
+
+    //     $response->headers->set('Content-Type', 'text/event-stream');
+    //     $response->headers->set('Cache-Control', 'no-cache');
+    //     return $response; 
+    // }
     public function bet()
     {
-       $response = new \Symfony\Component\HttpFoundation\StreamedResponse(function() {
-                $user = Auth::guard('web')->user();
-            //while(true){
-                echo 'retry:1000'.PHP_EOL;
-                $sport = $this->chessService->user_bets($user->id);
-                //$sec = strtotime($sport->start_datetime) - strtotime('now');
-                echo 'data:'.$sport.PHP_EOL;
-                echo PHP_EOL;
-                ob_flush();
-                flush();
-              //  sleep(0.5);
-            //}
-        });
-
-        $response->headers->set('Content-Type', 'text/event-stream');
-        $response->headers->set('Cache-Control', 'no-cache');
-        return $response; 
+        $user = Auth::guard('web')->user();
+        $sport = $this->chessService->user_bets($user->id);
+        return Response::json(array('data'=>$sport,'result'=>$result));
     }
-
 
     public function chess_bet_one()
     {
