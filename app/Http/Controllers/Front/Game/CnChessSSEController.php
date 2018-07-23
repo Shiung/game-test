@@ -9,8 +9,9 @@ use App\Services\Game\CategoryService;
 use App\Services\Game\SSE\ChessService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
-use Illuminate\Http\Response;
+// use Illuminate\Http\Response;
 use Auth;
+use Response;
 
 class CnChessSSEController extends Controller
 {
