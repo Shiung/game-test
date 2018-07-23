@@ -48,7 +48,7 @@ class CnChessSSEController extends Controller
                 echo PHP_EOL;
                 ob_flush();
                 flush();
-              //  sleep(0.5);
+               sleep(0.5);
             //}
         });
 
