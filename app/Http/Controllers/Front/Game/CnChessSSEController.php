@@ -142,7 +142,10 @@ class CnChessSSEController extends Controller
     {
         $user = Auth::guard('web')->user();
         $sport = $this->chessService->user_bets($user->id);
-        return Response::json(['data'=>$sport]);
+        // return Response::json(['data'=>$sport]);
+        return response()->json([
+            'data' => $sport,
+        ]);
     }
 
     public function chess_bet_one()
