@@ -80,32 +80,32 @@ $(function(){
             confirmButtonText: '確 認',
             showCancelButton: true,
         },function(isConfirm){
+
             if (isConfirm) {
-
-                $.ajax({
-                    url: "/SSE/balance",
-                }).done(function(data) {
-                    var balance = JSON.parse(data)
-                    //console.log(balance);
-        
-                    if(page_mode == 'web'){
-                        $("#virtual_cash").html(balance['virtual_cash']);
-                        $("#manage").html(balance['manage']);
-                        $("#share").html(balance['share']);
-                        $("#interest").html(balance['interest']);
-                    } else {
-                        $("#virtual_cash").html(nFormatter(balance['virtual_cash']));
-                        $("#manage").html(nFormatter(balance['manage']));
-                        $("#share").html(nFormatter(balance['share']));
-                        $("#interest").html(nFormatter(balance['interest']));
-                    }
-                });
-
                 sendUri = APP_URL + "/game/cn_chess/bet";
                 sendData = {'sport_id':$('#sport_id').val(),'records':bet_arr,'_token':$('#_token').val()};
                 goBet(sendUri,sendData);
             } 
             
+            $.ajax({
+                url: "/SSE/balance",
+            }).done(function(data) {
+                var balance = JSON.parse(data)
+                //console.log(balance);
+    
+                if(page_mode == 'web'){
+                    $("#virtual_cash").html(balance['virtual_cash']);
+                    $("#manage").html(balance['manage']);
+                    $("#share").html(balance['share']);
+                    $("#interest").html(balance['interest']);
+                } else {
+                    $("#virtual_cash").html(nFormatter(balance['virtual_cash']));
+                    $("#manage").html(nFormatter(balance['manage']));
+                    $("#share").html(nFormatter(balance['share']));
+                    $("#interest").html(nFormatter(balance['interest']));
+                }
+            });
+
         });
 
 		
