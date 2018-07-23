@@ -31,10 +31,10 @@ class ChessService {
     //header 計時info
     public function sport_chess()
     {
-        $sport = sport::where('sport_category_id',4)->orderBy('start_datetime','desc')->first();
+        $sport = sport::where('sport_category_id',4)->orderBy('id','desc')->first();
         $sec = strtotime($sport->start_datetime) - strtotime('now');
         $number = $sport->sport_number;
-        $today_num = explode("-", $number);
+        // $today_num = explode("-", $number);
         $r = json_encode(['sec'=>$sec, 'number'=>$number, 'datetime'=>date("Y-m-d H:i:s"), 'sport_id'=>$sport->id]);
         return $r;
     }
