@@ -1,0 +1,991 @@
+@font-face {
+    font-family: Frutiger;
+    src: url(../fonts/FrutigerLTStd-Bold.otf);
+}
+
+html,body {
+    font-family: "微軟正黑體" , sans-serif;
+    line-height: 180%;
+    height: 100%;
+}
+
+/*validate*/
+input.error { border: 1px solid #333; }
+label.error, label.error, .help-block {
+    color: #58595B;
+    margin-bottom: 0px;
+    font-style: normal;
+    text-align: center;
+    margin-top: 0;
+    font-size: 12px;
+}
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 7px;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+#uploadFile{
+    border-radius: 0;
+    /*box-shadow: none;*/
+    width: 50%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #d2d6de;
+
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+/* Tabs panel */
+.tabbable-panel {
+  border:1px solid #eee;
+  padding: 10px;
+}
+
+/* Default mode */
+.tabbable-line > .nav-tabs {
+  border: none;
+  margin: 0px;
+}
+.tabbable-line > .nav-tabs > li {
+  margin-right: 2px;
+}
+.tabbable-line > .nav-tabs > li > a {
+  border: 0;
+  margin-right: 0;
+  color: #737373;
+}
+.tabbable-line > .nav-tabs > li > a > i {
+  color: #a6a6a6;
+}
+.tabbable-line > .nav-tabs > li.open, .tabbable-line > .nav-tabs > li:hover {
+  border-bottom: 4px solid #c3e3f4;
+}
+.tabbable-line > .nav-tabs > li.open > a, .tabbable-line > .nav-tabs > li:hover > a {
+  border: 0;
+  background: none !important;
+  color: #333333;
+}
+.tabbable-line > .nav-tabs > li.open > a > i, .tabbable-line > .nav-tabs > li:hover > a > i {
+  color: #a6a6a6;
+}
+.tabbable-line > .nav-tabs > li.open .dropdown-menu, .tabbable-line > .nav-tabs > li:hover .dropdown-menu {
+  margin-top: 0px;
+}
+.tabbable-line > .nav-tabs > li.active {
+  border-bottom: 4px solid #3caae4;
+  position: relative;
+}
+.tabbable-line > .nav-tabs > li.active > a {
+  border: 0;
+  color: #333333;
+}
+.tabbable-line > .nav-tabs > li.active > a > i {
+  color: #404040;
+}
+.tabbable-line > .tab-content {
+  margin-top: -3px;
+  background-color: #fff;
+  border: 0;
+  border-top: 1px solid #eee;
+  padding: 15px 0;
+}
+.portlet .tabbable-line > .tab-content {
+  padding-bottom: 0;
+}
+
+/* Below tabs mode */
+
+.tabbable-line.tabs-below > .nav-tabs > li {
+  border-top: 4px solid transparent;
+}
+.tabbable-line.tabs-below > .nav-tabs > li > a {
+  margin-top: 0;
+}
+.tabbable-line.tabs-below > .nav-tabs > li:hover {
+  border-bottom: 0;
+  border-top: 4px solid #fbcdcf;
+}
+.tabbable-line.tabs-below > .nav-tabs > li.active {
+  margin-bottom: -2px;
+  border-bottom: 0;
+  border-top: 4px solid #f3565d;
+}
+.tabbable-line.tabs-below > .tab-content {
+  margin-top: -10px;
+  border-top: 0;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+}
+
+/*遊戲類背景*/
+.m-game-home-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url("../img/chess/web/back_04.png") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: 0;
+
+}
+
+.game-home-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url("../img/chess/web/back_04.png") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: 0;
+}
+
+.m-ball-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url("../img/ball/phone/back_sub_page.png") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: 0;
+
+}
+
+.ball-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url("../img/chess/web/back_04.png") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: 0;
+}
+
+/*交易平台-上方資訊顯示區*/
+.share-title-area {
+    position: relative;
+    width: 100%;
+    padding: 120px 0px 100px 0px;
+}
+
+.share-title-left {
+    position: relative;
+    height: 104px;
+}
+
+.share-title-left-icon {
+    height: 100%;
+    float: right;
+    overflow: hidden;
+}
+
+.share-title-left-icon img {
+    height: 100%;
+    backface-visibility: visible;
+    animation: flip 2.7s infinite both;
+}
+
+@keyframes flip {
+    from {
+        transform: perspective(600px) rotate3d(0, 1, 0, -180deg);
+    }
+    to {
+        transform: perspective(600px) rotate3d(0, 1, 0, 0deg);
+    }
+}
+
+.share-title-left-info {
+    position: relative;
+    float: right;
+    padding-left: 25px;
+}
+
+.share-title-left-info-new-title {
+    height: 42px;
+    line-height: 18px;
+    color: white;
+    font-size: 14px;
+}
+
+
+.share-title-left-info-new {
+    height: 50px;
+    line-height: 50px;
+    color: white;
+    font-size: 48px;
+    position: absolute;
+    top: 0;
+    left: 90px;
+    font-family: Frutiger , sans-serif;
+    font-weight: bold;
+    font-stretch: condensed;
+}
+
+.share-title-left-info-amount-title {
+    height: 26px;
+    line-height: 26px;
+    color: white;
+    font-size: 14px;
+}
+
+.share-title-left-info-amount {
+    height: 35px;
+    line-height: 35px;
+    color: white;
+    font-size: 32px;
+    font-family: Frutiger , sans-serif;
+    font-weight: bold;
+    font-stretch: condensed;
+}
+
+
+@media screen and (min-width: 992px) {
+    
+    .share-title-left-info {
+        min-width: 210px;
+    }
+    
+    
+}
+
+@media screen and (min-width: 1400px) {
+
+    .share-title-left {
+        padding-right: 120px;
+    }
+    
+}
+
+
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+    
+    .share-title-left {
+        padding-right: 80px;
+    }
+    
+    .share-title-area {
+        padding: 100px 0px;
+    }
+    
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    
+    .share-title-left {
+        padding-right: 80px;
+    }
+    
+    .share-title-area {
+        padding: 100px 0px 80px 0px;
+    }
+    
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    
+    .share-title-area {
+        padding: 80px 0px 60px 0px;
+    }
+
+    .share-title-left {
+        height: 85px;
+        padding-right: 60px;
+    }
+
+    .share-title-left-info {
+        min-width: 160px;
+        padding-left: 20px;
+    }
+
+    .share-title-left-info-new-title {
+        height: 33px;
+        line-height: 14px;
+        font-size: 12px;
+    }
+
+
+    .share-title-left-info-new {
+        height: 38px;
+        line-height: 38px;
+        font-size: 38px;
+        left: 75px;
+    }
+
+    .share-title-left-info-amount-title {
+        height: 22px;
+        line-height: 22px;
+        font-size: 12px;
+    }
+
+    .share-title-left-info-amount {
+        height: 24px;
+        line-height: 24px;
+        font-size: 24px;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    
+    .share-title-area {
+        padding: 85px 0px 40px 0px;
+    }
+    
+}
+
+/*i7plus*/
+@media screen and (min-width: 414px) and (max-width: 767px) {
+
+    .share-title-col {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .share-title-left {
+        width: 335px;
+        height: 95px;
+    }
+
+    .share-title-left-info {
+        width: 210px;
+        padding-left: 3px;
+        overflow-x: visible;
+    }
+
+    .share-title-left-info-new-title {
+        height: 36px;
+        line-height: 18px;
+        font-size: 12px;
+    }
+
+
+    .share-title-left-info-new {
+        height: 40px;
+        line-height: 40px;
+        font-size: 36px;
+        left: 60px;
+    }
+
+    .share-title-left-info-amount-title {
+        height: 26px;
+        line-height: 26px;
+        font-size: 12px;
+    }
+
+    .share-title-left-info-amount {
+        height: 32px;
+        line-height: 32px;
+        font-size: 24px;
+    }
+
+}
+
+/*i7大小～plus以下 & Android主流螢幕*/
+@media screen and (min-width: 360px) and (max-width: 413px) {
+
+    .share-title-col {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .share-title-area {
+        padding: 75px 0px 40px 0px;
+    }
+
+    .share-title-left {
+        width: 306px;
+        height: 80px;
+    }
+
+    .share-title-left-info {
+        width: 200px;
+        padding-left: 3px;
+        overflow-x: visible;
+    }
+
+    .share-title-left-info-new-title {
+        height: 30px;
+        line-height: 16px;
+        font-size: 12px;
+    }
+
+
+    .share-title-left-info-new {
+        height: 35px;
+        line-height: 35px;
+        font-size: 32px;
+        left: 55px;
+    }
+
+    .share-title-left-info-amount-title {
+        height: 24px;
+        line-height: 24px;
+        font-size: 12px;
+    }
+
+    .share-title-left-info-amount {
+        height: 26px;
+        line-height: 26px;
+        font-size: 22px;
+    }
+
+}
+
+/*i5大小*/
+@media screen and (max-width: 359px) {
+
+    .share-title-col {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .share-title-area {
+        padding: 65px 0px 25px 0px;
+    }
+
+    .share-title-left {
+        width: 290px;
+        height: 72px;
+    }
+
+    .share-title-left-info {
+        width: 200px;
+        padding-left: 5px;
+        overflow-x: visible;
+    }
+
+    .share-title-left-info-new-title {
+        height: 28px;
+        line-height: 16px;
+        font-size: 12px;
+    }
+
+    .share-title-left-info-new {
+        height: 32px;
+        line-height: 32px;
+        font-size: 28px;
+        left: 70px;
+    }
+
+    .share-title-left-info-amount-title {
+        height: 22px;
+        line-height: 20px;
+        font-size: 12px;
+    }
+
+    .share-title-left-info-amount {
+        height: 24px;
+        line-height: 24px;
+        font-size: 20px;
+    }
+
+}
+
+/*交易平台金幣及娛樂幣餘額*/
+
+.coin-account-row {
+    padding-top: 25px;
+}
+
+.coin-account-area {
+    position: relative;
+    width: 90%;
+    margin-top: -5px;
+}
+
+.coin-amount-icon {
+    position: relative;
+    width: 100%;
+    margin-left: 0%;
+    z-index: 2;
+}
+
+.coin-amount-icon img {
+    width: 100%;
+}
+
+.coin-amount-font {
+    position: absolute;
+    text-align: right;
+    right: 12%;
+    top: 33%;
+    color: white;
+    font-size: 18px;
+    z-index: 3;
+    font-family: Frutiger , sans-serif;
+    font-weight: bold;
+    font-stretch: condensed;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .coin-amount-font {
+        top: 28%;
+    }
+    .coin-account-row {
+        padding-top: 30px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .coin-amount-font {
+        top: 26%;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    
+    .coin-amount-font {
+        top: 38%;
+    }
+    
+    .coin-account-area {
+        position: relative;
+        width: 100%;
+        margin-top: -10px;
+    }
+}
+
+/*交易平台-表單抬頭、手動更新、買賣*/
+.share-btn-buy {
+    position: absolute;
+    height: 85px;
+    left: 43%;
+    top: 135px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.share-btn-buy img {
+    height: 100%;
+}
+
+.share-table-title-area {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    height: 70px;
+    margin-top: -70px;
+    background-color: white;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    z-index: 2;
+}
+
+.share-table-title-area-small {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    height: 25px;
+    background-color: white;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    z-index: 2;
+}
+
+.share-table-title {
+    position: absolute;
+    width: 100%;
+    line-height: 50px;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+}
+
+.share-refresh {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.share-refresh img {
+    height: 100%;
+}
+
+.show_more {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.show_more img {
+    height: 100%;
+}
+
+.share-table-bottom-area {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    height: 28px;
+    background-color: white;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .share-btn-buy {
+        height: 70px;
+        left: 43%;
+        top: 120px;
+    }
+    
+    .share-table-title-area {
+        width: 75%;
+    }
+    
+    .share-table-title-area-small {
+        width: 75%;
+    }
+
+    .share-table-title {
+        font-size: 26px;
+    }
+
+    .share-refresh {
+        top: 15px;
+        left: 20px;
+        height: 42px;
+    }
+    
+    .show_more {
+        top: 15px;
+        right: 20px;
+        height: 42px;
+    }
+
+    .share-table-bottom-area {
+        width: 75%;
+    }
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+
+    .share-btn-buy {
+        height: 50px;
+        left: 43%;
+        top: 130px;
+    }
+
+    .share-table-title-area {
+        height: 56px;
+        margin-top: -56px;
+    }   
+
+    .share-table-title {
+        line-height: 40px;
+        font-size: 24px;
+    }
+
+    .share-refresh {
+        top: 15px;
+        left: 20px;
+        height: 38px;
+    }
+    
+    .show_more {
+        top: 15px;
+        right: 20px;
+        height: 38px;
+    }
+    
+    .share-table-bottom-area {
+        height: 22px;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+    .share-btn-buy {
+        height: 40px;
+        left: 43%;
+        top: 100px;
+    }
+
+    .share-table-title-area {
+        height: 50px;
+        margin-top: -50px;
+    }   
+
+    .share-table-title {
+        line-height: 40px;
+        font-size: 22px;
+    }
+
+    .share-refresh {
+        top: 15px;
+        left: 20px;
+        height: 35px;
+    }
+    
+    .show_more {
+        top: 15px;
+        right: 20px;
+        height: 35px;
+    }
+
+    .share-table-bottom-area {
+        height: 22px;
+    }
+
+}
+
+
+/*i7plus*/
+@media screen and (min-width: 414px) and (max-width: 767px) {
+
+    .share-btn-buy {
+        height: 72px;
+        left: auto;
+        right: 5%;
+        margin-left: 0;
+        bottom: auto;
+        top: 50%;
+        margin-top: -16px;
+    }
+
+    .share-table-title-area {
+        background-color: white;
+        width: 100%;
+        height: 70px;
+        margin-top: 50px;
+    }   
+
+    .share-table-title-area-small {
+        width: 100%;
+    }
+
+    .share-table-title {
+        line-height: 45px;
+        font-size: 22px;
+    }
+
+    .share-refresh {
+        top: -20px;
+        left: 20px;
+        height: 40px;
+    }
+
+    .show_more {
+        top: -20px;
+        right: 15px;
+        height: 40px;
+    }
+    
+    .share-table-bottom-area {
+        width: 100%;
+    }
+
+}
+
+
+/*i7大小～plus以下 & Android主流螢幕*/
+@media screen and (min-width: 360px) and (max-width: 413px) {
+
+    .share-btn-buy {
+        height: 60px;
+        left: auto;
+        right: 5%;
+        margin-left: 0;
+        bottom: auto;
+        top: 50%;
+        margin-top: -16px;
+    }
+
+    .share-table-title-area {
+        background-color: white;
+        width: 100%;
+        height: 65px;
+        margin-top: 40px;
+    }   
+
+    .share-table-title-area-small {
+        width: 100%;
+    }
+
+    .share-table-title {
+        line-height: 45px;
+        font-size: 22px;
+    }
+
+    .share-refresh {
+        top: -19px;
+        left: 20px;
+        height: 38px;
+    }
+
+    .show_more {
+        top: -19px;
+        right: 15px;
+        height: 38px;
+    }
+
+    .share-table-bottom-area {
+        width: 100%;
+    }
+    
+}
+
+
+/*i5大小*/
+@media screen and (max-width: 359px) {
+
+    .share-btn-buy {
+        height: 48px;
+        left: auto;
+        right: 5%;
+        margin-left: 0;
+        bottom: auto;
+        top: 50%;
+        margin-top: -12px;
+    }
+
+    .share-table-title-area {
+        background-color: white;
+        width: 100%;
+        height: 55px;
+        margin-top: 30px;
+    }  
+
+    .share-table-title-area-small {
+        width: 100%;
+    }
+
+    .share-table-title {
+        line-height: 40px;
+        font-size: 18px;
+        letter-spacing: 3px;
+
+    }
+
+    .share-refresh {
+        top: -16px;
+        left: 20px;
+        height: 32px;
+    }
+
+    .show_more {
+        top: -16px;
+        right: 15px;
+        height: 32px;
+    }
+
+    .share-table-bottom-area {
+        width: 100%;
+    }
+    
+}
+
+/*交易平台表單*/
+.share-table-area {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    background-color: white;
+}
+
+
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .share-table-area {
+        width: 75%;
+    }
+
+}
+
+/*i7plus*/
+@media screen and (min-width: 414px) and (max-width: 767px) {
+
+    .share-table-area {
+        width: 100%;
+    }   
+
+}
+
+
+/*i7大小～plus以下 & Android主流螢幕*/
+@media screen and (min-width: 360px) and (max-width: 413px) {
+
+    .share-table-area {
+        width: 100%;
+    }  
+
+}
+
+
+/*i5大小*/
+@media screen and (max-width: 359px) {
+
+    .share-table-area {
+        width: 100%;
+    }  
+
+}
+
+.pagination {
+    font-size: 18px;
+}
+
+#data_list_wrapper {
+    margin-top: -1px;
+    margin-bottom: -1px;
+}

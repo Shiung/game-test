@@ -1,0 +1,37 @@
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #000;
+  line-height: 50px;
+  text-align: center;
+  background: #DDD;
+  cursor: pointer;
+}
+
+.circle_active {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #000;
+  line-height: 50px;
+  text-align: center;
+  background: yellow;
+  cursor: pointer;
+}
+
+.chess {
+	width:100px;
+	height:100px;
+
+	background: #DDD;
+	margin: 5px;
+	font-size: 20px;
+	cursor: pointer;
+}
+.chess_chip_part{
+  width:50px;
+  height:50px;
+}

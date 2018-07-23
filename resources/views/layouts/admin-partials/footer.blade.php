@@ -1,0 +1,1 @@
+<strong>Copyright &copy; {{ date('Y') }} {{ env('COMPANY_NAME') }}.</strong> All rights reserved.

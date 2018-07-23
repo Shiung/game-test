@@ -1,0 +1,2278 @@
+@font-face {
+    font-family: "隸書";
+    src: url("../../fonts/DFLiShuStd-W7.otf");
+}
+
+html,body { 
+  background: url("../../img/chess/web/back_02.png") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.hide {
+    display: none !important;
+}
+
+#info_bg {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 98;
+    background-color: rgba(25, 22, 57, 0.5);
+}
+
+@media screen and (min-width: 1400px) {
+    .container {
+        width: 1400px;
+    }
+}
+
+@media (min-width: 768px) {
+  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10 {
+    float: left;
+  }
+  .col-sm-10 {
+    width: 100%;
+  }
+  .col-sm-9 {
+    width: 90%;
+  }
+  .col-sm-8 {
+    width: 80%;
+  }
+  .col-sm-7 {
+    width: 70%;
+  }
+  .col-sm-6 {
+    width: 60%;
+  }
+  .col-sm-5 {
+    width: 50%;
+  }
+  .col-sm-4 {
+    width: 40%;
+  }
+  .col-sm-3 {
+    width: 30%;
+  }
+  .col-sm-2 {
+    width: 20%;
+  }
+  .col-sm-1 {
+    width: 10%;
+  }
+  .col-sm-pull-10 {
+    right: 100%;
+  }
+  .col-sm-pull-9 {
+    right: 90%;
+  }
+  .col-sm-pull-8 {
+    right: 80%;
+  }
+  .col-sm-pull-7 {
+    right: 70%;
+  }
+  .col-sm-pull-6 {
+    right: 60%;
+  }
+  .col-sm-pull-5 {
+    right: 50%;
+  }
+  .col-sm-pull-4 {
+    right: 40%;
+  }
+  .col-sm-pull-3 {
+    right: 30%;
+  }
+  .col-sm-pull-2 {
+    right: 20%;
+  }
+  .col-sm-pull-1 {
+    right: 10%;
+  }
+  .col-sm-pull-0 {
+    right: auto;
+  }
+  .col-sm-push-10 {
+    left: 100%;
+  }
+  .col-sm-push-9 {
+    left: 90%;
+  }
+  .col-sm-push-8 {
+    left: 80%;
+  }
+  .col-sm-push-7 {
+    left: 70%;
+  }
+  .col-sm-push-6 {
+    left: 60%;
+  }
+  .col-sm-push-5 {
+    left: 50%;
+  }
+  .col-sm-push-4 {
+    left: 40%;
+  }
+  .col-sm-push-3 {
+    left: 30%;
+  }
+  .col-sm-push-2 {
+    left: 20%;
+  }
+  .col-sm-push-1 {
+    left: 10%;
+  }
+  .col-sm-push-0 {
+    left: auto;
+  }
+  .col-sm-offset-10 {
+    margin-left: 100%;
+  }
+  .col-sm-offset-9 {
+    margin-left: 90%;
+  }
+  .col-sm-offset-8 {
+    margin-left: 80%;
+  }
+  .col-sm-offset-7 {
+    margin-left: 70%;
+  }
+  .col-sm-offset-6 {
+    margin-left: 60%;
+  }
+  .col-sm-offset-5 {
+    margin-left: 50%;
+  }
+  .col-sm-offset-4 {
+    margin-left: 40%;
+  }
+  .col-sm-offset-3 {
+    margin-left: 30%;
+  }
+  .col-sm-offset-2 {
+    margin-left: 20%;
+  }
+  .col-sm-offset-1 {
+    margin-left: 10%;
+  }
+  .col-sm-offset-0 {
+    margin-left: 0;
+  }
+}
+@media (min-width: 992px) {
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10{
+    float: left;
+  }
+  .col-md-10 {
+    width: 100%;
+  }
+  .col-md-9 {
+    width: 90%;
+  }
+  .col-md-8 {
+    width: 80%;
+  }
+  .col-md-7 {
+    width: 70%;
+  }
+  .col-md-6 {
+    width: 60%;
+  }
+  .col-md-5 {
+    width: 50%;
+  }
+  .col-md-4 {
+    width: 40%;
+  }
+  .col-md-3 {
+    width: 30%;
+  }
+  .col-md-2 {
+    width: 20%;
+  }
+  .col-md-1 {
+    width: 10%;
+  }
+  .col-md-pull-10 {
+    right: 100%;
+  }
+  .col-md-pull-9 {
+    right: 90%;
+  }
+  .col-md-pull-8 {
+    right: 80%;
+  }
+  .col-md-pull-7 {
+    right: 70%;
+  }
+  .col-md-pull-6 {
+    right: 60%;
+  }
+  .col-md-pull-5 {
+    right: 50%;
+  }
+  .col-md-pull-4 {
+    right: 40%;
+  }
+  .col-md-pull-3 {
+    right: 30%;
+  }
+  .col-md-pull-2 {
+    right: 20%;
+  }
+  .col-md-pull-1 {
+    right: 10%;
+  }
+  .col-md-pull-0 {
+    right: auto;
+  }
+  .col-md-push-10 {
+    left: 100%;
+  }
+  .col-md-push-9 {
+    left: 90%;
+  }
+  .col-md-push-8 {
+    left: 80%;
+  }
+  .col-md-push-7 {
+    left: 70%;
+  }
+  .col-md-push-6 {
+    left: 60%;
+  }
+  .col-md-push-5 {
+    left: 50%;
+  }
+  .col-md-push-4 {
+    left: 40%;
+  }
+  .col-md-push-3 {
+    left: 30%;
+  }
+  .col-md-push-2 {
+    left: 20%;
+  }
+  .col-md-push-1 {
+    left: 10%;
+  }
+  .col-md-push-0 {
+    left: auto;
+  }
+  .col-md-offset-10 {
+    margin-left: 100%;
+  }
+  .col-md-offset-9 {
+    margin-left: 90%;
+  }
+  .col-md-offset-8 {
+    margin-left: 80%;
+  }
+  .col-md-offset-7 {
+    margin-left: 70%;
+  }
+  .col-md-offset-6 {
+    margin-left: 60%;
+  }
+  .col-md-offset-5 {
+    margin-left: 50%;
+  }
+  .col-md-offset-4 {
+    margin-left: 40%;
+  }
+  .col-md-offset-3 {
+    margin-left: 30%;
+  }
+  .col-md-offset-2 {
+    margin-left: 20%;
+  }
+  .col-md-offset-1 {
+    margin-left: 10%;
+  }
+  .col-md-offset-0 {
+    margin-left: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+    float: left;
+  }
+  .col-lg-10 {
+    width: 100%;
+  }
+  .col-lg-9 {
+    width: 90%;
+  }
+  .col-lg-8 {
+    width: 80%;
+  }
+  .col-lg-7 {
+    width: 70%;
+  }
+  .col-lg-6 {
+    width: 60%;
+  }
+  .col-lg-5 {
+    width: 50%;
+  }
+  .col-lg-4 {
+    width: 40%;
+  }
+  .col-lg-3 {
+    width: 30%;
+  }
+  .col-lg-2 {
+    width: 20%;
+  }
+  .col-lg-1 {
+    width: 10%;
+  }
+  .col-lg-pull-10 {
+    right: 100%;
+  }
+  .col-lg-pull-9 {
+    right: 90%;
+  }
+  .col-lg-pull-8 {
+    right: 80%;
+  }
+  .col-lg-pull-7 {
+    right: 70%;
+  }
+  .col-lg-pull-6 {
+    right: 60%;
+  }
+  .col-lg-pull-5 {
+    right: 50%;
+  }
+  .col-lg-pull-4 {
+    right: 40%;
+  }
+  .col-lg-pull-3 {
+    right: 30%;
+  }
+  .col-lg-pull-2 {
+    right: 20%;
+  }
+  .col-lg-pull-1 {
+    right: 10%;
+  }
+  .col-lg-pull-0 {
+    right: auto;
+  }
+  .col-lg-push-10 {
+    left: 100%;
+  }
+  .col-lg-push-9 {
+    left: 90%;
+  }
+  .col-lg-push-8 {
+    left: 80%;
+  }
+  .col-lg-push-7 {
+    left: 70%;
+  }
+  .col-lg-push-6 {
+    left: 60%;
+  }
+  .col-lg-push-5 {
+    left: 50%;
+  }
+  .col-lg-push-4 {
+    left: 40%;
+  }
+  .col-lg-push-3 {
+    left: 30%;
+  }
+  .col-lg-push-2 {
+    left: 20%;
+  }
+  .col-lg-push-1 {
+    left: 10%;
+  }
+  .col-lg-push-0 {
+    left: auto;
+  }
+  .col-lg-offset-10 {
+    margin-left: 100%;
+  }
+  .col-lg-offset-9 {
+    margin-left: 90%;
+  }
+  .col-lg-offset-8 {
+    margin-left: 80%;
+  }
+  .col-lg-offset-7 {
+    margin-left: 70%;
+  }
+  .col-lg-offset-6 {
+    margin-left: 60%;
+  }
+  .col-lg-offset-5 {
+    margin-left: 50%;
+  }
+  .col-lg-offset-4 {
+    margin-left: 40%;
+  }
+  .col-lg-offset-3 {
+    margin-left: 30%;
+  }
+  .col-lg-offset-2 {
+    margin-left: 20%;
+  }
+  .col-lg-offset-1 {
+    margin-left: 10%;
+  }
+  .col-lg-offset-0 {
+    margin-left: 0;
+  }
+}
+
+/*期別&倒數*/
+#header_part {
+    position: relative;
+}
+
+.header-row {
+    padding: 20px 0px 20px 0px;
+}
+
+.chess-header-bg {
+    position: absolute;
+    width: 95%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.chess-time-bg {
+    position: absolute;
+    width: 95%;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.chess-header-text {
+    position: relative;
+    font-size: 22px;
+    line-height: 54px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: bold;
+    color: #191639;
+    z-index: 2;
+}
+
+.progress {
+    position: absolute;
+    width: 60%;
+    top: 17px;
+    left: 30px;
+    height: 22px;
+    background-color: rgba(0,0,0,0);
+    border: 2px solid #191639;
+    border-radius: 0px;
+}
+
+.progress-bar {
+    float:right;
+    background-color: #191639;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .header-row {
+        padding: 25px 0px 10px 0px;
+    }
+    
+    .chess-header-text {
+        font-size: 20px;
+        line-height: 46px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .progress {
+        top: 14px;
+        left: 25px;
+        height: 20px;
+    }    
+    
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+
+    .header-row {
+        padding: 25px 0px 10px 0px;
+    }
+    
+    .chess-header-text {
+        font-size: 16px;
+        line-height: 38px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .progress {
+        top: 11px;
+        left: 20px;
+        height: 18px;
+    }    
+    
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    
+    .header-row {
+        padding: 20px 0px 10px 0px;
+    }
+    
+    .chess-header-text {
+        font-size: 14px;
+        line-height: 30px;
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+
+    .progress {
+        top: 8px;
+        left: 12px;
+        height: 14px;
+    }    
+    
+}
+
+
+/*上方開獎結果*/
+
+@keyframes run {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -470px 0;
+  }
+}
+
+@keyframes back {
+  0% {
+    background-position: -470px 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.latest-lottery-area {
+    position: relative;
+    width: 100%;
+    margin-top: -10px;
+    padding-left: 120px;
+}
+
+#lottery_close {
+    position: relative;
+    width: 100%;
+    margin-top: 0px;
+}
+
+.lottery-close-img-area {
+    margin-left: 20px;
+    width: 90px;
+    height: 90px;
+    float: left;
+    text-align: center;
+    background: url("../../img/chess/phone/chess_cross_black_01.png") 0 0 no-repeat;
+    background-size: auto 90px;  
+}
+
+#lottery_open {
+    display: none;
+    position: relative;
+    width: 100%;
+    margin-top: 0px;
+}
+
+.lottery_open_1 {
+    background: url("../../img/chess/phone/chess_animate/1.png") 0 0 no-repeat;
+}
+
+.lottery_open_2 {
+    background: url("../../img/chess/phone/chess_animate/2.png") 0 0 no-repeat;
+}
+
+.lottery_open_3 {
+    background: url("../../img/chess/phone/chess_animate/3.png") 0 0 no-repeat;
+}
+
+.lottery_open_4 {
+    background: url("../../img/chess/phone/chess_animate/4.png") 0 0 no-repeat;
+}
+
+.lottery_open_5 {
+    background: url("../../img/chess/phone/chess_animate/5.png") 0 0 no-repeat;
+}
+
+.lottery_open_6 {
+    background: url("../../img/chess/phone/chess_animate/6.png") 0 0 no-repeat;
+}
+
+.lottery_open_7 {
+    background: url("../../img/chess/phone/chess_animate/7.png") 0 0 no-repeat;
+}
+
+.lottery_open_8 {
+    background: url("../../img/chess/phone/chess_animate/8.png") 0 0 no-repeat;
+}
+
+.lottery_open_9 {
+    background: url("../../img/chess/phone/chess_animate/9.png") 0 0 no-repeat;
+}
+
+.lottery_open_10 {
+    background: url("../../img/chess/phone/chess_animate/10.png") 0 0 no-repeat;
+}
+.lottery_open_11 {
+    background: url("../../img/chess/phone/chess_animate/11.png") 0 0 no-repeat;
+}
+
+.lottery_open_12 {
+    background: url("../../img/chess/phone/chess_animate/12.png") 0 0 no-repeat;
+}
+
+.lottery_open_13 {
+    background: url("../../img/chess/phone/chess_animate/13.png") 0 0 no-repeat;
+}
+
+.lottery_open_14 {
+    background: url("../../img/chess/phone/chess_animate/14.png") 0 0 no-repeat;
+}
+
+.lottery_open_15 {
+    background: url("../../img/chess/phone/chess_animate/15.png") 0 0 no-repeat;
+}
+
+.lottery_open_16 {
+    background: url("../../img/chess/phone/chess_animate/16.png") 0 0 no-repeat;
+}
+
+.lottery_open_17 {
+    background: url("../../img/chess/phone/chess_animate/17.png") 0 0 no-repeat;
+}
+
+.lottery_open_18 {
+    background: url("../../img/chess/phone/chess_animate/18.png") 0 0 no-repeat;
+}
+
+.lottery_open_19 {
+    background: url("../../img/chess/phone/chess_animate/19.png") 0 0 no-repeat;
+}
+
+.lottery_open_20 {
+    background: url("../../img/chess/phone/chess_animate/20.png") 0 0 no-repeat;
+}
+
+.lottery_open_21 {
+    background: url("../../img/chess/phone/chess_animate/21.png") 0 0 no-repeat;
+}
+
+.lottery_open_22 {
+    background: url("../../img/chess/phone/chess_animate/22.png") 0 0 no-repeat;
+}
+
+.lottery-open-img-area {
+    margin-left: 20px;
+    width: 90px;
+    height: 90px;
+    float: left;
+    text-align: center;
+    background-size: auto 90px;
+
+}
+
+.lottery-animate1 {
+    animation: run 1.5s 1s steps(5) 1;
+    animation-fill-mode: forwards;
+}
+
+.lottery-animate2 {
+    animation: run 1.5s 3s steps(5) 1;
+    animation-fill-mode: forwards;
+}
+
+.lottery-animate3 {
+    animation: run 1.5s 5s steps(5) 1;
+    animation-fill-mode: forwards;
+}
+
+.lottery-animate4 {
+    animation: run 1.5s 7s steps(5) 1;
+    animation-fill-mode: forwards;
+}
+
+.lottery-animate5 {
+    animation: run 1.5s 9s steps(5) 1;
+    animation-fill-mode: forwards;
+}
+
+.lottery-animate-close {
+    animation: back 1.5s 0s steps(5) 1;
+    animation-fill-mode: backwards;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .latest-lottery-area {
+        margin-top: -5px;
+        padding-left: 140px;
+    }
+    
+    @keyframes run {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: -367px 0;
+      }
+    }
+    
+    @keyframes back {
+      0% {
+        background-position: -367px 0;
+      }
+      100% {
+        background-position: 0 0;
+      }
+    }
+    
+    .lottery-close-img-area {
+        margin-left: 10px;
+        width: 70px;
+        height: 70px;
+        background-size: auto 70px;  
+    }
+
+    .lottery-open-img-area {
+        margin-left: 10px;
+        width: 70px;
+        height: 70px;
+        background-size: auto 70px;
+    }
+    
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    
+    .latest-lottery-area {
+        margin-top: -5px;
+        padding-left: 100px;
+    }
+    
+    @keyframes run {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: -313px 0;
+      }
+    }
+    
+    @keyframes back {
+      0% {
+        background-position: -313px 0;
+      }
+      100% {
+        background-position: 0 0;
+      }
+    }
+    
+    .lottery-close-img-area {
+        margin-left: 8px;
+        width: 60px;
+        height: 60px;
+        background-size: auto 60px;  
+    }
+
+    .lottery-open-img-area {
+        margin-left: 8px;
+        width: 60px;
+        height: 60px;
+        background-size: auto 60px;
+    }
+    
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    
+    .latest-lottery-area {
+        margin-top: -5px;
+        padding-left: 60px;
+    }
+    
+    @keyframes run {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: -263px 0;
+      }
+    }
+    
+    @keyframes back {
+      0% {
+        background-position: -263px 0;
+      }
+      100% {
+        background-position: 0 0;
+      }
+    }
+    
+    .lottery-close-img-area {
+        margin-left: 8px;
+        width: 50px;
+        height: 50px;
+        background-size: auto 50px;  
+    }
+
+    .lottery-open-img-area {
+        margin-left: 8px;
+        width: 50px;
+        height: 50px;
+        background-size: auto 50px;
+    }
+    
+}
+
+
+/*會員資訊、餘額*/
+
+#amount_detail_part {
+    position: relative;
+    width: 100%;
+}
+
+.chess-amount-bg {
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+    top: 0;
+    left: 0;
+}
+
+.chess-member {
+    position: relative;
+    z-index: 1;
+    width: 65%;
+    margin-left: 13%;
+    padding-top: 45px;
+}
+
+.table-member {
+    border: 0px;
+    color: #652114;
+    line-height: 100%;
+}
+
+
+.table-member > thead > tr > th, .table-record > tbody > tr > th, .table-member > tfoot > tr > th, .table-record > thead > tr > td, .table-member > tbody > tr > td, .table-record > tfoot > tr > td {
+    border-top: 2px solid #652114;
+    border-bottom: 2px solid #652114;
+    vertical-align:middle;
+    padding: 2px 5px;
+}
+
+.member-td1 {
+    font-size: 10px;
+    border-right: 2px solid #652114;
+    text-align: center;
+    font-weight: bold;
+}
+
+.member-td2 {
+    font-size: 14px;
+    text-align: left;
+    font-weight: bold;
+}
+
+#virtual_cash {
+    position: absolute;
+    right: 55px;
+    top: 202px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#share {
+    position: absolute;
+    right: 55px;
+    top: 275px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#interest {
+    position: absolute;
+    right: 55px;
+    top: 345px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#manage {
+    position: absolute;
+    right: 55px;
+    top: 418px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+    
+    .chess-member {
+        padding-top: 35px;
+    }
+    
+    .table-member > thead > tr > th, .table-record > tbody > tr > th, .table-member > tfoot > tr > th, .table-record > thead > tr > td, .table-member > tbody > tr > td, .table-record > tfoot > tr > td {
+        padding: 2px;
+    }
+
+    .member-td1 {
+        font-size: 10px;
+    }
+
+    .member-td2 {
+        font-size: 10px;
+    }  
+    
+    #virtual_cash {
+        position: absolute;
+        right: 43px;
+        top: 168px;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    #share {
+        position: absolute;
+        right: 43px;
+        top: 228px;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    #interest {
+        position: absolute;
+        right: 43px;
+        top: 291px;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    #manage {
+        position: absolute;
+        right: 43px;
+        top: 351px;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+
+    .chess-member {
+        width: 75%;
+        margin-left: 9%;
+        padding-top: 26px;
+    }
+    
+    .table-member > thead > tr > th, .table-record > tbody > tr > th, .table-member > tfoot > tr > th, .table-record > thead > tr > td, .table-member > tbody > tr > td, .table-record > tfoot > tr > td {
+        padding: 0px;
+    }
+
+    .member-td1 {
+        font-size: 10px;
+    }
+
+    .member-td2 {
+        font-size: 10px;
+        
+    }  
+
+    #virtual_cash {
+        right: 35px;
+        top: 127px;
+        font-size: 14px;
+    }
+
+    #share {
+        right: 35px;
+        top: 173px;
+        font-size: 14px;
+    }
+
+    #interest {
+        right: 35px;
+        top: 220px;
+        font-size: 14px;
+    }
+
+    #manage {
+        right: 35px;
+        top: 267px;
+        font-size: 14px;
+    }    
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    
+    .chess-member {
+        display: none;
+    }
+
+
+    #virtual_cash {
+        right: 25px;
+        top: 90px;
+        font-size: 12px;
+    }
+
+    #share {
+        right: 25px;
+        top: 125px;
+        font-size: 12px;
+    }
+
+    #interest {
+        right: 25px;
+        top: 160px;
+        font-size: 12px;
+    }
+
+    #manage {
+        right: 25px;
+        top: 195px;
+        font-size: 12px;
+    }   
+
+}
+
+/*歷史紀錄、下注紀錄*/
+
+#bet-history-btn-open {
+    position: absolute;
+    top: 510px;
+    left: 0;
+    width: 48%;
+    cursor: pointer;
+}
+
+#bet-latest-btn-open {
+    position: absolute;
+    top: 510px;
+    left: 50%;
+    width: 48%;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+    
+    #bet-history-btn-open {
+        top: 440px;
+    }
+
+    #bet-latest-btn-open {
+        top: 440px;
+    }
+    
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+
+    #bet-history-btn-open {
+        top: 350px;
+    }
+
+    #bet-latest-btn-open {
+        top: 350px;
+    }  
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    
+    #bet-history-btn-open {
+        top: 270px;
+    }
+
+    #bet-latest-btn-open {
+        top: 270px;
+    }
+
+}
+
+/*下注紀錄*/
+
+#bet_record_part {
+    display: none;
+    position: fixed;
+    width: 40%;
+    height: 550px;
+    top: 30.5%;
+    left: 30%;
+    background: url("../../img/chess/phone/chess-open-cross_02.gif");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    z-index: 99;
+    padding: 50px 50px;
+}
+
+#bet_record_content {
+    display: none;
+}
+
+#bet_record_part_animate {
+    display: none;
+    position: fixed;
+    width: 40%;
+    height: 550px;
+    top: 30.5%;
+    left: 30%;
+    background: url("../../img/chess/phone/chess-close-cross_02.gif");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    z-index: 99;
+    padding: 20px 30px;
+}
+
+
+.bet-record-close {
+    position: absolute;
+    width: 35px;
+    top: 60px;
+    right: 50px;
+    cursor: pointer;
+}
+
+.bet-record-close img {
+    width: 100%;
+}
+
+.reel-title {
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.reel-title img {
+    height: 26px;
+}
+
+.table-record-area {
+    margin-top: 10px;
+    width: 100%;
+    height: 360px;
+    padding-right: 10px;
+    overflow-y: scroll;
+}
+
+.table-record-area::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0);
+}
+
+.table-record-area::-webkit-scrollbar
+{
+    width: 10px;
+    background-color: #3C0000;
+    border-left: 3px solid #E7B652;
+    border-right: 3px solid #E7B652;
+}
+
+.table-record-area::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    background-color: #3C0000;
+}
+
+.table-record {
+    border: 1px solid #3C0000;
+    color:  #3C0000;
+    font-size: 20px;
+}
+
+.table-record > thead > tr > th {
+    border-bottom: 1px solid #3C0000;
+    text-align: center;
+    font-size: 18px;
+}
+
+.table-record > thead > tr > th, .table-record > tbody > tr > th, .table-record > tfoot > tr > th, .table-record > thead > tr > td, .table-record > tbody > tr > td, .table-record > tfoot > tr > td {
+    border: 1px solid #3C0000;
+    vertical-align:middle;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/*最新下注圖片顯示*/
+
+.bet-record-currency-1 {
+    background: url("../../img/chess/phone/chess/currency_1.png");
+}
+
+.bet-record-currency-2 {
+    background: url("../../img/chess/phone/chess/currency_2.png");
+}
+
+.bet-record-currency-3 {
+    background: url("../../img/chess/phone/chess/currency_3.png");
+}
+
+.bet-record-currency-4 {
+    background: url("../../img/chess/phone/chess/currency_4.png");
+}
+
+.bet-record-gamble-12 {
+    width:63px !important;
+    height: 30px;
+    background: url("../../img/chess/phone/chess/12.png");
+    background-repeat: no-repeat;
+    background-size: 63px 30px !important;
+}
+
+.bet-record-gamble-35 {
+    background: url("../../img/chess/phone/chess/35.png");
+}
+
+.bet-record-gamble-46 {
+    background: url("../../img/chess/phone/chess/46.png");
+}
+
+.bet-record-gamble-79 {
+    background: url("../../img/chess/phone/chess/79.png");
+}
+
+.bet-record-gamble-810 {
+    background: url("../../img/chess/phone/chess/810.png");
+}
+
+.bet-record-gamble-1113 {
+    background: url("../../img/chess/phone/chess/1113.png");
+}
+
+.bet-record-gamble-1214 {
+    background: url("../../img/chess/phone/chess/1214.png");
+}
+
+.bet-record-gamble-1517 {
+    background: url("../../img/chess/phone/chess/1517.png");
+}
+
+.bet-record-gamble-1618 {
+    background: url("../../img/chess/phone/chess/1618.png");
+}
+
+.bet-record-gamble-1921 {
+    background: url("../../img/chess/phone/chess/1921.png");
+}
+
+.bet-record-gamble-2022 {
+    background: url("../../img/chess/phone/chess/2022.png");
+}
+
+.bet-record-gamble-B {
+    background: url("../../img/chess/phone/chess/B.png");
+}
+
+.bet-record-gamble-R {
+    background: url("../../img/chess/phone/chess/R.png");
+}
+
+.latest-bet-record-img {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-size: 60px 60px;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+    
+    #bet_record_part {
+        height: 450px;
+        padding: 40px 40px;
+    }
+
+    .bet-record-close {
+        width: 35px;
+        top: 50px;
+        right: 50px;
+    }
+
+    .reel-title {
+        padding-top: 15px;
+        padding-bottom: 10px;
+    }
+
+    .reel-title img {
+        height: 26px;
+    }
+
+    .table-record-area {
+        height: 280px;
+        padding-right: 10px;
+    }
+
+    .table-record {
+        font-size: 20px;
+    }
+
+    .table-record > thead > tr > th {
+        font-size: 18px;
+    }
+    
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+
+    #bet_record_part {
+        height: 380px;
+        padding: 30px 30px;
+        top: 26%;
+    }
+
+    #bet_record_part_animate {
+        top: 26%;
+    }
+    
+    .bet-record-close {
+        width: 30px;
+        top: 40px;
+        right: 35px;
+    }
+
+    .reel-title {
+        padding-top: 12px;
+        padding-bottom: 10px;
+    }
+
+    .reel-title img {
+        height: 20px;
+    }
+
+    .table-record-area {
+        height: 230px;
+        padding-right: 10px;
+    }
+
+    .table-record {
+        font-size: 18px;
+    }
+
+    .table-record > thead > tr > th {
+        font-size: 16px;
+    }
+    
+    .latest-bet-record-img {
+        width: 50px;
+        height: 50px;
+        background-size: 50px 50px;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+    #bet_record_part {
+        height: 320px;
+        padding: 30px 30px;
+        top: 20%;
+    }
+
+    #bet_record_part_animate {
+        top: 20%;
+    }
+    
+    .bet-record-close {
+        width: 25px;
+        top: 35px;
+        right: 25px;
+    }
+
+    .reel-title {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .reel-title img {
+        height: 18px;
+    }
+
+    .table-record-area {
+        height: 200px;
+        padding-right: 10px;
+    }
+
+    .table-record {
+        font-size: 16px;
+    }
+
+    .table-record > thead > tr > th {
+        font-size: 14px;
+    }
+    
+    .latest-bet-record-img {
+        width: 40px;
+        height: 40px;
+        background-size: 40px 40px;
+    }
+
+}
+
+
+/*歷史開獎*/
+#history_lottery_part {
+    display: none;
+    position: fixed;
+    width: 40%;
+    height: 550px;
+    top: 30.5%;
+    left: 30%;
+    background: url("../../img/chess/phone/chess-open-cross_01.gif");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    z-index: 99;
+    padding: 30px 4%;
+
+}
+
+#history_lottery_content {
+    display: none;
+}
+
+#history_lottery_close_animate {
+    display: none;
+    position: fixed;
+    width: 40%;
+    height: 550px;
+    top: 30.5%;
+    left: 30%;
+    background: url("../../img/chess/phone/chess-close-cross_01.gif");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    z-index: 99;
+    padding: 50px 50px;
+}
+
+.history-title {
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.history-title img {
+    height: 26px;
+}
+
+.bet-history-close {
+    position: absolute;
+    width: 35px;
+    top: 40px;
+    right: 60px;
+    cursor: pointer;
+}
+
+.bet-history-close img {
+    width: 100%;
+}
+
+.history-tr , .history-tr td {
+    height: 60px;
+    line-height: 60px;
+    padding: 2px 0px !important;
+    text-align: center;
+    
+}
+
+.chesstd {
+    display: -webkit-flex;
+    display: flex;
+}
+
+.history_chess_red {
+    float: left;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background: url("../../img/chess/phone/chess_other_R.png");
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: 50px 50px;
+    text-align: center;
+    font-family: "隸書";
+    color: #E3000D;
+    font-size: 32px;
+    -webkit-flex: 1;
+          flex: 1;
+}
+
+.history_chess_black {
+    float: left;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background: url("../../img/chess/phone/chess_other_B.png");
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: 50px 50px;
+    text-align: center;
+    font-family: "隸書";
+    color: #000000;
+    font-size: 32px;
+    -webkit-flex: 1;
+          flex: 1;
+}
+
+.history_chess_red span , .history_chess_black span{
+    font-family: "隸書";
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+    
+    #history_lottery_part {
+        height: 450px;
+        padding: 25px 4%;
+    } 
+    
+    .history-title {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .history-title img {
+        height: 22px;
+    }
+
+    .bet-history-close {
+        width: 30px;
+        top: 32px;
+        right: 50px;
+    }
+    
+    .history-tr , .history-tr td {
+        height: 52px;
+        line-height: 52px;
+        padding: 2px 0px !important;
+    }
+
+    .history_chess_red , .history_chess_black {
+        width: 44px;
+        height: 44px;
+        line-height: 44px;
+        background-size: 44px 44px;
+        font-size: 32px;
+    }
+    
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+ 
+    #history_lottery_part {
+        height: 380px;
+        padding: 15px 4%;
+        top: 26%;
+    } 
+    
+    #history_lottery_close_animate {
+        top: 26%;
+    }
+    
+    .history-title {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .history-title img {
+        height: 16px;
+    }
+
+    .bet-history-close {
+        width: 25px;
+        top: 22px;
+        right: 40px;
+    }
+    
+    .history-tr , .history-tr td {
+        height: 40px;
+        line-height: 40px;
+        padding: 2px 0px !important;
+    }
+
+    .history_chess_red , .history_chess_black {
+        width: 34px;
+        height: 34px;
+        line-height: 34px;
+        background-size: 34px 34px;
+        font-size: 26px;
+    }
+    
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+    #history_lottery_part {
+        height: 320px;
+        padding: 5px 4%;
+        top: 20%;
+    } 
+    
+    #history_lottery_close_animate {
+        top: 20%;
+    }
+    
+    .history-title {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .history-title img {
+        height: 12px;
+    }
+
+    .bet-history-close {
+        width: 18px;
+        top: 16px;
+        right: 32px;
+    }
+    
+    .history-tr , .history-tr td {
+        height: 30px;
+        line-height: 30px;
+        padding: 2px 0px !important;
+    }
+
+    .history_chess_red , .history_chess_black {
+        width: 26px;
+        height: 26px;
+        line-height: 26px;
+        background-size: 26px 26px;
+        font-size: 20px;
+    }
+    
+}
+
+/*棋盤*/
+
+#bet_checkerboard {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 70%;
+}
+
+#bet_start {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 0;
+    padding-bottom: 70%;
+    background-color: rgba(25, 22, 57, 0);
+    z-index: 99;
+}
+
+#bet_start img {
+    width: 70%;
+    margin-left: 15%;
+}
+
+#bet_end {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 0;
+    padding-bottom: 70%;
+    background-color: rgba(25, 22, 57, 0);
+    z-index: 99;
+}
+
+#bet_end img {
+    width: 70%;
+    margin-left: 15%;
+}
+
+.checkerboard-bg {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.checkerboard-row-first {
+    width: 91.4%;
+    padding: 0;
+    height: 0;
+    padding-bottom: 3.7%;
+    margin-left: 4.3%;
+}
+
+.checkerboard-row {
+    width: 91.4%;
+    padding: 0;
+    height: 0;
+    padding-bottom: 15.8%;
+    margin-left: 4.3%;
+}
+
+
+
+.checkerboard-col {
+    padding: 0px 0px;
+}
+
+.m-chess-bg {
+    position: absolute;
+    width: 60%;
+    top: 10px;
+    left: 20%;
+    z-index: 1;
+}
+
+/*將帥*/
+.m-chess-bg-b {
+    position: absolute;
+    width: 30%;
+    top: 10px;
+    left: 18%;
+    z-index: 1;
+}
+
+.m-chess-bg-r {
+    position: absolute;
+    width: 30%;
+    top: 10px;
+    left: 52%;
+    z-index: 1;
+}
+
+/*黑紅*/
+.m-chess-bg-color {
+    position: absolute;
+    width: 44%;
+    top: 15px;
+    left: 28%;
+    z-index: 1;
+}
+
+
+.chess_number {
+    position: relative;
+    font-family: "隸書";
+    z-index: 2;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    padding-top: 20px;
+    cursor: pointer;
+    color: rgba(0,0,0,0);
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    /*黑紅*/
+    .m-chess-bg-color {
+        top: 12px;
+    }
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    
+    /*黑紅*/
+    .m-chess-bg-color {
+        top: 8px;
+    }
+    
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+   
+    /*黑紅*/
+    .m-chess-bg-color {
+        top: 8px;
+    }    
+    
+}
+
+
+/*棋子下注點擊區域*/
+.chess-link {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    padding-bottom: 60%;
+    z-index: 98;
+    top: 0;
+    left: 0;
+}
+
+.chess-link-king {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    padding-bottom: 30%;
+    z-index: 98;
+    top: 0;
+    left: 0;
+}
+
+.m-color-chess-bg {
+    width: 55%;
+    z-index: 1;
+}
+
+.chess_color {
+    padding-top:5px;
+}
+
+.chess_chip_part {
+    position: absolute;
+}
+
+.chess_b {
+    color: #000000;
+}
+
+.chess_r {
+    color: #E3000D;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+   
+    .chess-link {
+        padding-bottom: 55%;
+    } 
+    
+    .chess-link-king {
+        padding-bottom: 27.5%;
+    }
+    
+}
+
+/*棋盤中下注額顯示*/
+.chip-area {
+    display: none;
+    position: absolute;
+    padding: 10px 20px;
+    left: 0;
+    z-index: 97;
+}
+
+.chip-area img {
+    width: 20px;
+    height: 20px;
+    margin-top: -5px;
+    margin-right: 5px;
+}
+
+
+.chip-mount {
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 2px 2px #000, 0 -2px 2px #000, 2px 0 2px #000, -2px 0 2px #000;
+}
+
+.chip-area-gold {
+    top: 0;
+}
+
+.chip-area-ulg {
+    top: 25px;
+}
+
+.chip-area-red {
+    top: 50px;
+}
+
+.chip-area-gift {
+    top: 75px;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+
+    .chip-area {
+        padding: 5px 12px;
+    }
+
+    .chip-area img {
+        width: 18px;
+        height: 18px;
+        margin-top: -5px;
+        margin-right: 5px;
+    }
+
+    .chip-mount {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .chip-area-gold {
+        top: 0;
+    }
+
+    .chip-area-ulg {
+        top: 20px;
+    }
+
+    .chip-area-red {
+        top: 40px;
+    }
+
+    .chip-area-gift {
+        top: 60px;
+    }
+    
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+    .chip-area {
+        padding: 5px 8px;
+    }
+
+    .chip-area img {
+        width: 14px;
+        height: 14px;
+        margin-top: -5px;
+        margin-right: 5px;
+    }
+
+    .chip-mount {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .chip-area-gold {
+        top: 0;
+    }
+
+    .chip-area-ulg {
+        top: 15px;
+    }
+
+    .chip-area-red {
+        top: 30px;
+    }
+
+    .chip-area-gift {
+        top: 45px;
+    }  
+  
+}
+
+/*棋盤中下注圖片顯示*/
+
+.bet_ani_1 {
+    position: absolute;
+    width: 160px;
+    height: 88px;
+    background: url("../../img/chess/web/coin_01.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    bottom: -110px;
+    right: -20px;
+    z-index: 96;
+}
+
+.bet_ani_2 {
+    position: absolute;
+    width: 160px;
+    height: 88px;
+    background: url("../../img/chess/web/coin_02.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    bottom: -110px;
+    right: -20px;
+    z-index: 96;
+}
+
+.bet_ani_3 {
+    position: absolute;
+    width: 160px;
+    height: 88px;
+    background: url("../../img/chess/web/coin_03.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    bottom: -110px;
+    right: -20px;
+    z-index: 96;
+}
+
+.bet_ani_4 {
+    position: absolute;
+    width: 160px;
+    height: 88px;
+    background: url("../../img/chess/web/coin_04.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    bottom: -110px;
+    right: -20px;
+    z-index: 96;
+}
+
+
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .bet_ani_1 , .bet_ani_2 , .bet_ani_3 , .bet_ani_4 {
+        width: 140px;
+        height: 77px;
+        bottom: -90px;
+        right: -20px;
+    }
+    
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+
+    .bet_ani_1 , .bet_ani_2 , .bet_ani_3 , .bet_ani_4 {
+        width: 120px;
+        height: 66px;
+        bottom: -65px;
+        right: -15px;
+    }
+      
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+    .bet_ani_1 , .bet_ani_2 , .bet_ani_3 , .bet_ani_4 {
+        width: 80px;
+        height: 44px;
+        bottom: -45px;
+        right: -10px;
+    }
+    
+}
+
+/*下注區域*/
+#bet_chip {
+    position: relative;
+}
+
+#bet_investment {
+    position: relative;
+}
+
+.bet-bg {
+    display: none;
+    width: 100%;
+    z-index: 1;
+}
+
+.bet-select {
+    display: none;
+    width: 100%;
+    z-index: 1;
+}
+
+.display {
+    display: block !important;
+}
+
+.bet-btn {
+    position: absolute;
+    left: 16%;
+    width: 70%;
+    cursor: pointer;
+}
+
+.chip-col {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 100%;
+    height: 0;
+    padding-bottom: 97%;
+}
+
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+
+    .chip-col {
+        padding-left: 0px;
+        padding-right: 0px;
+        width: 100%;
+        height: 0;
+        padding-bottom: 102%;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+    .chip-col {
+        padding-left: 0px;
+        padding-right: 0px;
+        width: 100%;
+        height: 0;
+        padding-bottom: 106%;
+    }
+
+}
+
+/*籌碼未選擇(圓形)
+.circle_bottom_bg1 , .circle_bottom_bg3 {
+    background: url("../../img/chess/web/currency_bet_back_B_01.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}*/
+
+/*籌碼未選擇(卡片形)
+.circle_bottom_bg2 , .circle_bottom_bg4 {
+    background: url("../../img/chess/web/currency_bet_back_B_02.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}*/
+
+/*籌碼未選擇(金額)*/
+.circle_bottom_bg {
+    background: url("../../img/chess/web/coin_bet_back_B.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+/*籌碼已選擇(圓形)
+.circle_active1 , .circle_active3 {
+    background: url("../../img/chess/web/currency_bet_back_W_01.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}*/
+
+/*籌碼已選擇(卡片形)
+.circle_active2 , .circle_active4 {
+    background: url("../../img/chess/web/currency_bet_back_W_02.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}*/
+
+/*籌碼已選擇(金額)*/
+.circle_active {
+    background: url("../../img/chess/web/coin_bet_back_W.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+#latest_count {
+    display: none;
+    position: fixed;
+    width: 400px;
+    height: 530px;
+    top: 50%;
+    margin-top: -200px;
+    left: 50%;
+    margin-left: -200px;
+    background: url("../../img/chess/phone/popup_bet_bg_02.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    z-index: 99;
+}
+
+.bet_result_close {
+    position: absolute;
+    top: 12%;
+    right: 10%;
+    width: 30px;
+    cursor: pointer;
+}
+
+.bet_result_close img {
+    width: 100%;
+}
+
+.bet_account {
+    position: absolute;
+    right: 60px;
+    color: #3c0000;
+    text-align: right;
+    font-family: Frutiger;
+    font-size: 24px;
+    font-weight: bold;
+    font-stretch: condensed;
+}
+
+
+#bet_account_1 {
+    top: 166px;
+}
+
+#bet_account_3 {
+    top: 245px;
+}
+
+#bet_account_4 {
+    top: 322px;
+}
+
+#bet_account_2 {
+    top: 399px;
+}
+
+
+#count_bg {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 98;
+    background-color: rgba(25, 22, 57, 0.5);
+}
+
+/*下注按鈕*/
+#confirm_bet_0 {
+    display: block;
+}
+
+#confirm_bet {
+    display: none;
+}
+#cancel_bet_0 {
+    display: block;
+}
+
+#cancel_bet {
+    display: none;
+}

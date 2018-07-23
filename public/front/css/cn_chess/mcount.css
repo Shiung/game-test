@@ -1,0 +1,171 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+#countdown {
+    position: absolute;
+    top:0;
+    left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  animation: countdown 6s;
+    z-index: 9999;
+    display: none;
+}
+
+#countdown .dimmed {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(22, 26, 57, 0.5);
+}
+
+#countdown .bg {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../../img/chess/phone/count/phone/count_bg.png") 50% 50% no-repeat;
+  background-size: 100% auto;
+}
+
+@media (min-width: 640px) {
+  #countdown .bg {
+    background-size: 528px 528px;
+  }
+}
+
+#countdown .count-wrap {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  width: 58.2%;
+  height: 100%;
+  overflow: hidden;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+@media (min-width: 640px) {
+  #countdown .count-wrap {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+#countdown .count-wrap .circle {
+  width: 100%;
+  height: 100%;
+  background: url("../../img/chess/phone/count/phone/count_circle.png") 50% 50% no-repeat;
+  background-size: 100% auto;
+  opacity: 1;
+  animation: circle 1s 5;
+}
+
+#countdown .count-wrap .count {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  width: 45.2%;
+  height: 52.9%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+#countdown .count-wrap .count .number-1 {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: url("../../img/chess/phone/count/phone/count_01.png") 50% 50% no-repeat;
+  background-size: 100% auto;
+  opacity: 0;
+  transform: scale(0);
+  animation: number 1s 4s;
+}
+
+#countdown .count-wrap .count .number-2 {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: url("../../img/chess/phone/count/phone/count_02.png") 50% 50% no-repeat;
+  background-size: 100% auto;
+  opacity: 0;
+  transform: scale(0);
+  animation: number 1s 3s;
+}
+
+#countdown .count-wrap .count .number-3 {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: url("../../img/chess/phone/count/phone/count_03.png") 50% 50% no-repeat;
+  background-size: 100% auto;
+  opacity: 0;
+  transform: scale(0);
+  animation: number 1s 2s;
+}
+
+#countdown .count-wrap .count .number-4 {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: url("../../img/chess/phone/count/phone/count_04.png") 50% 50% no-repeat;
+  background-size: 100% auto;
+  opacity: 0;
+  transform: scale(0);
+  animation: number 1s 1s;
+}
+
+#countdown .count-wrap .count .number-5 {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: url("../../img/chess/phone/count/phone/count_05.png") 50% 50% no-repeat;
+  background-size: 100% auto;
+  opacity: 0;
+  transform: scale(0);
+  animation: number 1s 0s;
+}
+
+@keyframes countdown {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+}
+
+@keyframes circle {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes number {
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
