@@ -8,9 +8,9 @@
 <link rel="stylesheet" href="{{ asset('plugins/fancybox/source/jquery.fancybox.css?v=2.1.5') }}" type="text/css" media="screen" />
 
 <!--象棋相關-->
-<link rel="stylesheet" href="{{ asset('front/css/cn_chess/main.css') }}?v=20180302"> 
-<link rel="stylesheet" href="{{ asset('front/css/cn_chess/mobile.css') }}?v=20180302"> 
-<link rel="stylesheet" href="{{ asset('front/css/cn_chess/mcount.css') }}?v=20180302"> 
+<link rel="stylesheet" href="{{ asset('front/css/cn_chess/main.css') }}?v=20180726"> 
+<link rel="stylesheet" href="{{ asset('front/css/cn_chess/mobile.css') }}?v=20180726"> 
+<link rel="stylesheet" href="{{ asset('front/css/cn_chess/mcount.css') }}?v=20180726"> 
 <style>
 
     .sweet-alert {
@@ -535,8 +535,8 @@
 
 
 <!--象棋相關-->
-<script src="{{ asset('front/js/cn_chess/main.js') }}?v=20180302"></script>
-<script src="{{ asset('front/js/cn_chess/mobile.js') }}?v=20180302"></script>
+<script src="{{ asset('front/js/cn_chess/main.js') }}?v=20180726"></script>
+<script src="{{ asset('front/js/cn_chess/mobile.js') }}?v=20180726"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
 <script src="{{ asset('plugins/js-webshim/minified/polyfiller.js') }}"></script>
 
